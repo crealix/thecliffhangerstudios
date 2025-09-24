@@ -32,6 +32,12 @@ h2 {
 p, li {
   font-size: 1rem;
 } */
+@font-face {
+  font-family: 'Baskerville Display PT';
+  src: url('fonts/BaskervilleDisplayPT-Regular-Fontspring-DEMO.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 body {
@@ -41,6 +47,9 @@ body {
    color: #0D330E; /* Dark green text */
    background-color: #EEEFE0; /* Cream base background */
  }
+ p,a,b {
+    font-family: 'Montserrat', sans-serif;
+  }
 
  .light-section {
    background: #FAF9EE;
@@ -49,7 +58,7 @@ body {
 
  /* Elegant script for couple names, titles */
  h1, h2, {
-   font-family: 'Great Vibes', cursive;
+   font-family: 'Baskerville Display PT';
    font-weight: normal;
    color: #6E8649; /* Olive green titles */
    text-align: center;
@@ -67,7 +76,7 @@ h3, h4 {
 p, li {
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  color: #0D330E; /* Dark green for body text */
+  /* color: #0D330E; /* Dark green for body text */
 }
 
 
@@ -99,9 +108,10 @@ p, li {
 }
 /* Names - elegant script */
 .wedding-title {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Baskerville Display PT';
+  /* font-family: 'Baskerville Display PT', cursive; */
   /* font-weight: normal; */
-  color: #8E9F86; /* Olive green titles old color 6E8649*/
+  color: #37441c; /* Olive green titles old color 6E8649*/
   text-align: center;
   font-size: 42px;
   /* font-size: 93px; */
@@ -116,7 +126,7 @@ p, li {
   padding: 1rem;
 }
 .wedding-sub-name-title {
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Baskerville Display PT';
   font-size: 56px;
   color: #4B3A2F;
   text-align: center;
@@ -189,7 +199,7 @@ hr {
 .nav-links li a {
   color: white;
   text-decoration: none;
-  font-size: 0.70rem;
+  font-size: 0.9rem;
   transition: color 0.3s;
 }
 
@@ -268,7 +278,7 @@ hr {
 
 /* Couple names */
 .couple-names {
- font-family: 'Great Vibes', cursive;
+ font-family: 'Baskerville Display PT', cursive;
  font-size: 60px;
  margin: 20px 0;
 }
@@ -353,7 +363,7 @@ hr {
 
 .hero-text {
   position: absolute;
-   font-family: 'Great Vibes', cursive;
+   font-family: 'Baskerville Display PT';
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
