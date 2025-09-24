@@ -1,26 +1,20 @@
-/* Reset and Base */
+/* Reset and Base  | MAIN */
+/* Global body font setup*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  /*font-family: 'Segoe UI', sans-serif;*/
+/* body {
   background-color: #fffdfc;
   color: #4a4a4a;
   line-height: 1.7;
   scroll-behavior: smooth;
-}
-
-.section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
+} */
 
 /* Typography */
-h1 {
+/* h1 {
   color: #ffedb6;
   font-weight: 600;
   margin-bottom: 20px;
@@ -32,20 +26,138 @@ h2 {
   margin-bottom: 20px;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
-}
-
+} */
+/*
 
 p, li {
   font-size: 1rem;
+} */
+
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   line-height: 1.6;
+   color: #0D330E; /* Dark green text */
+   background-color: #EEEFE0; /* Cream base background */
+ }
+
+ .light-section {
+   background: #FAF9EE;
+   color: #2C3E50;
+ }
+
+ /* Elegant script for couple names, titles */
+ h1, h2, {
+   font-family: 'Great Vibes', cursive;
+   font-weight: normal;
+   color: #6E8649; /* Olive green titles */
+   text-align: center;
+   letter-spacing: 1px;
+ }
+/* Subtitles / section headers */
+h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #477023; /* Stronger green for section headers */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/* Body text (details, RSVP instructions, FAQs, etc.) */
+p, li {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #0D330E; /* Dark green for body text */
 }
 
+
+/* ///////////////// */
+
+/* === Buttons === */
+.rsvp-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #6E8649; /* Olive green */
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.rsvp-button:hover {
+  background: #477023; /* Darker green hover */
+}
+
+/* === Customize text Behavior === */
 .center-text {
   text-align: center;
 }
+/* Names - elegant script */
+.wedding-title {
+  font-family: 'Great Vibes', cursive;
+  /* font-weight: normal; */
+  color: #8E9F86; /* Olive green titles old color 6E8649*/
+  text-align: center;
+  font-size: 42px;
+  /* font-size: 93px; */
+  font-weight: 500;
+  letter-spacing: 1px;
+}
 
+.desc-text {
+  font-size: 24px;
+  /* color: #444; */
+  /* margin-bottom: 10px; */
+  padding: 1rem;
+}
+.wedding-sub-name-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 56px;
+  color: #4B3A2F;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+
+/* Supporting titles or dates */
+.wedding-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  /*color: #666;*/
+   color: white;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+  /* === Sections === */
+.section {
+  /* padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto; */
+  padding:56px 0;
+}
+.alt-section {
+  background-color: #D1D8BE; /* Soft sage/khaki for alternating sections */
+}
+/* === Decorative Borders === */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #819A91; /* Sage line */
+  margin: 40px auto;
+  width: 60%;
+}
+/* ////////////////////
+///////////////////////
+/////////////////// */
 /* Navbar */
 .navbar {
-  background-color: #806948;
+  background-color: #2D531A;
   color: white;
   position: sticky;
   top: 0;
@@ -77,7 +189,7 @@ p, li {
 .nav-links li a {
   color: white;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.70rem;
   transition: color 0.3s;
 }
 
@@ -94,52 +206,139 @@ p, li {
   cursor: pointer;
 }
 
-/*Banner*/
+/* === Banner Section === */
 .banner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+ position: relative;
+ min-height: 100vh; /* full screen */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ color: white;
+ font-family: 'Montserrat', sans-serif;
+ background: url('../images/official-banner.jpg') center/cover no-repeat;
 }
 
-.banner-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  max-height: 500px; /* optional limit */
+/* Dark overlay */
+.banner::before {
+ content: "";
+ position: absolute;
+ top: 0; left: 0;
+ width: 100%; height: 100%;
+ background: rgba(0, 0, 0, 0.35);
+ z-index: 1;
 }
 
-.banner-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent overlay */
-  padding: 1rem 2rem;
-  border-radius: 10px;
+.banner-content {
+ position: relative;
+ z-index: 2;
+ max-width: 800px;
+ padding: 20px;
 }
 
-.banner-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0;
+/* Date styling */
+.wedding-date {
+ font-size: 18px;
+ font-weight: 400;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ margin-bottom: 20px;
+ display: flex;
+ flex-wrap: wrap; /* allow wrap on smaller screens */
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+}
+
+.wedding-date span {
+ font-weight: 600;
+}
+
+.divider {
+ flex: 1;
+ height: 1px;
+ background: white;
+ min-width: 30px;
+}
+
+.wedding-date .day {
+ font-size: 56px;
+ font-weight: 700;
+}
+
+/* Couple names */
+.couple-names {
+ font-family: 'Great Vibes', cursive;
+ font-size: 60px;
+ margin: 20px 0;
+}
+
+.decorative-line {
+ margin: 20px auto;
+ width: 150px;
+ height: 2px;
+ background: white;
+ border-radius: 2px;
 }
 
 .banner-subtitle {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
-}
-@media (max-width: 768px) {
-  .banner-title {
-    font-size: 1rem;
-  }
-  .banner-subtitle {
-    font-size: 1rem;
-  }
+ font-size: 16px;
+ font-weight: 300;
+ margin-top: 20px;
+ color: #FAF9EE;
 }
 
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+ .banner {
+   min-height: 70vh; /* reduce height on smaller screens */
+   background-position: center top; /* crop from top */
+ }
+ .couple-names {
+   font-size: 38px;
+ }
+ .wedding-date .day {
+   font-size: 38px;
+ }
+ .wedding-date {
+   font-size: 14px;
+   gap: 5px;
+ }
+ .banner-subtitle {
+   font-size: 14px;
+   padding: 0 10px;
+ }
+ .divider {
+  display: none; /* ✅ hide dividers on mobile */
+ }
+ .desc-text {
+   font-size: 14px;
+   padding: 1rem;
+ }
+}
+
+@media (max-width: 480px) {
+ .banner {
+   min-height: 60vh;
+   background-position: center;
+ }
+ .couple-names {
+   font-size: 32px;
+ }
+ .wedding-date .day {
+   font-size: 32px;
+ }
+ .wedding-date {
+   font-size: 12px;
+ }
+ .divider {
+  display: none;
+ }
+ .desc-text {
+   font-size: 12px;
+   padding: 1rem;
+ }
+}
 /* Hero Section */
 .hero {
   position: relative;
@@ -289,19 +488,22 @@ p, li {
   background-color: #933c3c;
 }
 
-/* Footer */
-footer {
-  background: #f8f2f2;
-  padding: 30px 20px;
-  text-align: center;
-  font-size: 0.9rem;
-}
 
+header, footer {
+  background-color: #2D531A; /* Deep forest green */
+  color: #EEEFE0; /* Cream text */
+  padding: 20px;
+  text-align: center;
+}
+/* Footer */
 footer a {
-  color: #806948;
+  color: #A7C1A8; /* Dusty green links */
   text-decoration: none;
 }
 
+footer a:hover {
+  color: #819A91; /* Sage hover */
+}
 .social-icons {
   margin-top: 15px;
 }
@@ -332,11 +534,11 @@ footer a {
 /* Back to Top Button */
 #backToTopBtn {
   position: fixed;
-  bottom: 30px;
+  bottom: 16px;
   right: 30px;
   padding: 12px 16px;
   border: none;
-  background-color: #806948;
+  background-color: #0D330E;
   color: white;
   border-radius: 50%;
   font-size: 20px;
@@ -347,7 +549,7 @@ footer a {
 }
 
 #backToTopBtn:hover {
-  background-color: #933c3c;
+  background-color: #6E8649;
 }
 
 /* Mobile Responsive */
@@ -359,7 +561,7 @@ footer a {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #806948;
+    background-color: #2D531A;
     position: absolute;
     top: 60px;
     right: 20px;
@@ -425,7 +627,7 @@ footer a {
     .faq-container {
       max-width: 600px;
       margin: auto;
-
+      padding: 1rem;
     }
 
     .faq-item {
@@ -438,7 +640,8 @@ footer a {
 
     .faq-question {
       background-color: #fff;
-      color: #00334e;
+      font-family: 'Montserrat', sans-serif;
+      color: #0D330E;
       font-weight: bold;
       padding: 1rem;
       display: flex;
@@ -454,6 +657,7 @@ footer a {
     }
 
     .faq-answer {
+      font-family: 'Montserrat', sans-serif;
       padding: 1rem;
       display: none;
       color: #333;
@@ -468,46 +672,6 @@ footer a {
       font-weight: bold;
       font-size: 1.2rem;
     }
-
-    /*  .desc-text {
-    font-size: 5rem;
-    font-weight: 800;
-    font-family: 'Segoe UI', sans-serif;
-  }*/
-  .desc-text {
-  font-size: 24px;        /* Change text size */
-  color: #444;            /* Customize text color */
-  font-family: 'Georgia', serif;  /* Choose a font */
-  margin-bottom: 10px;
-}
-
-/* Names - elegant script */
-.wedding-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 56px;
-  color: #806948;
-  text-align: center;
-  margin-bottom: 0.3rem;
-}
-
-.wedding-sub-name-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: 56px;
-  color: #4B3A2F;
-  text-align: center;
-  margin-bottom: 0.3rem;
-}
-
-
-/* Supporting titles or dates */
-.wedding-subtitle {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  /*color: #666;*/
-   color: white;
-  text-align: center;
-  letter-spacing: 0.5px;
-}
 
 /* Section styling */
 .dress-code {
@@ -553,7 +717,6 @@ footer a {
 /* Headings */
 .dress-box h3 {
   font-size: 1.6rem;
-  color: #5a6a98;
   margin-bottom: 0.5rem;
 }
 
@@ -574,7 +737,7 @@ footer a {
 .color-circle {
   width: 160px;
   height: 160px;
-  background-color: #f1f1f1;
+  background-color: #2D531A;
   border-radius: 50%;
   margin: 1rem auto;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -620,4 +783,3 @@ footer a {
   object-fit: contain;
   display: block;
 }
-
