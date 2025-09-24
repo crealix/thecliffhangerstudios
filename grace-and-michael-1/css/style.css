@@ -649,7 +649,7 @@ footer a:hover {
     }
 
     .faq-question {
-      background-color: #fff;
+      background-color: #FAF9EE;
       font-family: 'Montserrat', sans-serif;
       color: #0D330E;
       font-weight: bold;
@@ -667,6 +667,7 @@ footer a:hover {
     }
 
     .faq-answer {
+      background-color: #FAF9EE;
       font-family: 'Montserrat', sans-serif;
       padding: 1rem;
       display: none;

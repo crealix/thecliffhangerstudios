@@ -44,7 +44,7 @@ body {
    font-family: 'Montserrat', sans-serif;
    font-size: 16px;
    line-height: 1.6;
-   color: #0D330E; /* Dark green text */
+   color: #161313; /* Dark green text */
    background-color: #EEEFE0; /* Cream base background */
  }
  p,a,b {
@@ -52,7 +52,7 @@ body {
   }
 
  .light-section {
-   background: #FAF9EE;
+   background: #F6F4F0;
    color: #2C3E50;
  }
 
@@ -68,7 +68,7 @@ body {
 h3, h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #477023; /* Stronger green for section headers */
+  color: #161313; /* Stronger green for section headers */
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -99,7 +99,7 @@ p, li {
 }
 
 .rsvp-button:hover {
-  background: #477023; /* Darker green hover */
+  background: #161313; /* Darker green hover */
 }
 
 /* === Customize text Behavior === */
@@ -111,7 +111,7 @@ p, li {
   font-family: 'Baskerville Display PT';
   /* font-family: 'Baskerville Display PT', cursive; */
   /* font-weight: normal; */
-  color: #37441c; /* Olive green titles old color 6E8649*/
+  color: #161313;
   text-align: center;
   font-size: 42px;
   /* font-size: 93px; */
@@ -167,7 +167,7 @@ hr {
 /////////////////// */
 /* Navbar */
 .navbar {
-  background-color: #2D531A;
+  background-color: #161313;
   color: white;
   position: sticky;
   top: 0;
@@ -295,7 +295,7 @@ hr {
  font-size: 16px;
  font-weight: 300;
  margin-top: 20px;
- color: #FAF9EE;
+ color: #F6F4F0;
 }
 
 /* ===== MOBILE FIXES ===== */
@@ -571,7 +571,7 @@ footer a:hover {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #2D531A;
+    background-color: #161313;
     position: absolute;
     top: 60px;
     right: 20px;
@@ -649,9 +649,9 @@ footer a:hover {
     }
 
     .faq-question {
-      background-color: #fff;
+      background-color: #F6F4F0;
       font-family: 'Montserrat', sans-serif;
-      color: #0D330E;
+      color: #161313;
       font-weight: bold;
       padding: 1rem;
       display: flex;
@@ -668,6 +668,7 @@ footer a:hover {
 
     .faq-answer {
       font-family: 'Montserrat', sans-serif;
+      background-color: #F6F4F0;
       padding: 1rem;
       display: none;
       color: #333;
