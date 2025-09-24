@@ -793,3 +793,135 @@ footer a:hover {
   object-fit: contain;
   display: block;
 }
+
+
+
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding: 2rem;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+
+#close {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+/* Lightbox Modal */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+.lightbox iframe {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+.lightbox .close,
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+.lightbox .close {
+  top: 50px;
+  right: 30px;
+  font-size: 35px;
+}
+.lightbox .prev { left: 30px; }
+.lightbox .next { right: 30px; }
+
+/* Gallery normal style*/
+.project-gallery {
+  display: grid;
+  margin-left: 18px;
+  margin-right: 18px;
+  /* grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.project-gallery img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;   /* force square box */
+  object-fit: cover;     /* crop instead of stretch */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.project-gallery img:hover {
+  transform: scale(1.02);
+}
+
+.project-gallery iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;   /* force square box */
+  object-fit: cover;     /* crop instead of stretch */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+/* .project-gallery iframe:hover {
+  transform: scale(0.05);
+} */
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsive Adjustments project-gallery */
+@media (max-width: 1024px) {
+  .project-gallery {grid-template-columns: repeat(3, 1fr);}
+}
+
+@media (max-width: 768px) {
+.project-gallery {grid-template-columns: repeat(2, 1fr);}
+}
+
+@media (max-width: 480px) {
+.project-gallery {grid-template-columns: repeat(2, 1fr);}
+}
+@media (max-width: 390px) {
+.project-gallery {grid-template-columns: repeat(1, 1fr);}
+}

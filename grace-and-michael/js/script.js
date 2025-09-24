@@ -52,3 +52,43 @@ backToTopBtn.addEventListener('click', () => {
       });
     }
   });
+
+
+  // Lightbox functionality
+  let currentIndex = 0;
+  let currentImages = [];
+
+  document.querySelectorAll(".project-gallery img").forEach((img, index) => {
+    img.addEventListener("click", () => {
+      currentImages = Array.from(img.closest(".project-gallery").querySelectorAll("img")).filter(i => i.style.display !== "none");
+      currentIndex = currentImages.indexOf(img);
+      openLightbox(currentImages[currentIndex].src);
+    });
+  });
+
+  document.querySelectorAll(".project-gallery iframe").forEach((img, index) => {
+    img.addEventListener("click", () => {
+      currentImages = Array.from(img.closest(".project-gallery").querySelectorAll("iframe")).filter(i => i.style.display !== "none");
+      currentIndex = currentImages.indexOf(img);
+      openLightbox(currentImages[currentIndex].src);
+    });
+  });
+
+  function openLightbox(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
+
+  function changeImage(step) {
+    currentIndex = (currentIndex + step + currentImages.length) % currentImages.length;
+    document.getElementById("lightbox-img").src = currentImages[currentIndex].src;
+  }
+
+  // Close lightbox on background click
+  document.getElementById("lightbox").addEventListener("click", (e) => {
+    if (e.target.id === "lightbox") closeLightbox();
+  });
