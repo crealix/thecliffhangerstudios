@@ -68,7 +68,7 @@ body {
 h3, h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #477023; /* Stronger green for section headers */
+  color: #071E07;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -90,7 +90,7 @@ p, li {
   padding: 12px 28px;
   border: none;
   border-radius: 30px;
-  background: #254117; /* Olive green */
+  background: #0D330E; /* Olive green */
   color: white;
   cursor: pointer;
   text-decoration: none;
@@ -99,7 +99,7 @@ p, li {
 }
 
 .rsvp-button:hover {
-  background: #477023; /* Darker green hover */
+  background: #2D531A; /* Darker green hover */
 }
 
 /* === Customize text Behavior === */
@@ -111,7 +111,7 @@ p, li {
   font-family: 'Baskerville Display PT';
   /* font-family: 'Baskerville Display PT', cursive; */
   /* font-weight: normal; */
-  color: #254117; /* Olive green titles old color 254117*/
+  color: #071E07; /* Olive green titles old color 254117*/
   text-align: center;
   font-size: 42px;
   /* font-size: 93px; */
@@ -167,7 +167,7 @@ hr {
 /////////////////// */
 /* Navbar */
 .navbar {
-  background-color: #254117;
+  background-color: #071E07;
   color: white;
   position: sticky;
   top: 0;
@@ -500,8 +500,8 @@ hr {
 
 
 header, footer {
-  background-color: #254117; /* Deep forest green */
-  color: #EEEFE0; /* Cream text */
+  background-color: #071E07;
+  color: #EEEFE0;
   padding: 20px;
   text-align: center;
 }
@@ -548,7 +548,7 @@ footer a:hover {
   right: 30px;
   padding: 12px 16px;
   border: none;
-  background-color: #0D330E;
+  background-color: #071E07;
   color: white;
   border-radius: 50%;
   font-size: 20px;
@@ -559,7 +559,7 @@ footer a:hover {
 }
 
 #backToTopBtn:hover {
-  background-color: #254117;
+  background-color: #2D531A;
 }
 
 /* Mobile Responsive */
@@ -571,7 +571,7 @@ footer a:hover {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #254117;
+    background-color: #071E07;
     position: absolute;
     top: 60px;
     right: 20px;
@@ -748,7 +748,7 @@ footer a:hover {
 .color-circle {
   width: 160px;
   height: 160px;
-  background-color: #254117;
+  background-color: #071E07;
   border-radius: 50%;
   margin: 1rem auto;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
