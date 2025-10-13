@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css" />
-    <!-- <script src="js/disable-right-click.js" defer></script> -->
+    <script src="js/disable-right-click.js" defer></script>
 </head>
 <body>
 
@@ -87,6 +87,7 @@
 
   <!-- Our Story -->
 <section id="our-story" class="section our-story ">
+  <br>
   <div class="our-story-content">
     <div class="text">
       <h1 class="wedding-title">Our Story</h1>
@@ -119,7 +120,7 @@
   <!-- Ceremony -->
 
   <!-- NEW -->
-  <section id="venue" class="venue-section">
+  <section id="ceremony" class="venue-section">
     <h2 class="wedding-title">Ceremony & Reception</h2>
     <p class="venue-desc">Our celebration will take place at the Viridis Countryside Garden, Amadeo, Cavite. Here's a glimpse of the venue:</p>
 
@@ -133,7 +134,8 @@
       <img src="images/venue 7.jpg" alt="Venue 7" />
       <img src="images/VIRIDIS MAP.jpg" alt="Venue 8" />
     </div>
-    <a href="https://maps.app.goo.gl/6oa9VphdrWgJ5hfQ6" class="rsvp-button" target="_blank" xmlns="http://www.w3.org/2000/svg">View map</a>
+    <br>
+    <a href="https://maps.app.goo.gl/6oa9VphdrWgJ5hfQ6" class="rsvp-button" target="_self" xmlns="http://www.w3.org/2000/svg">View map</a>
   </section>
 
   <!-- Popup Modal -->
@@ -223,9 +225,10 @@
   </section>
 
   <!-- Prenup Photos -->
-<h2 class="wedding-title light-section"><br>Prenup Photos</h2>
-<section id="prenup-photos" class="photo-gallery light-section">
-  <div class="container">
+
+<section id="prenup-photos">
+  <h2 class="wedding-title light-section"><br>Prenup Photos</h2>
+  <div  class="photo-gallery light-section">
       <img src="images/prenup/GRACE&MICHAEL-10.jpg" alt="Prenup 1" />
       <img src="images/prenup/GRACE&MICHAEL-11.jpg" alt="Prenup 2" />
       <img src="images/prenup/GRACE&MICHAEL-12.jpg" alt="Prenup 3" />
@@ -318,7 +321,7 @@
       <span class="toggle-icon">+</span>
     </div>
     <div class="faq-answer">
-      Please arrive <b>15–30 minutes early</b>. The ceremony will begin promptly at \[Time].
+      Please arrive <b>15–30 minutes early</b>. The ceremony will begin promptly at 4:00 PM.
       <br>(You can also add: "Late arrivals may be asked to wait until after the ceremony."
     </div>
   </div>
@@ -410,7 +413,7 @@
     <h2 class="wedding-title">RSVP</h2>
     <img src="images/qr-code-grace-michael-official.png" alt="QR Code" class="qr" />
     <p>Kindly confirm your attendance below:</p><br>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScw6ddhncz3u38raG5HjeAMCyEmhkYdGoSlsPjtEHCn4xhbvQ/viewform?usp=dialog" class="rsvp-button" target="_blank">Open RSVP Form</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScw6ddhncz3u38raG5HjeAMCyEmhkYdGoSlsPjtEHCn4xhbvQ/viewform?usp=dialog" class="rsvp-button" target="_self">Open RSVP Form</a>
   </section>
 
 
@@ -437,6 +440,16 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+
+
+  <!-- Background Music -->
+<audio id="bg-music" preload="auto" class="music-toggle" loop >
+  <source src="music/bruno-mars-marry-you.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<!-- Floating Music Button -->
+<button id="music-btn" title="Play or Pause Music" class="music-btn">🎵</button>
+<script src="js/script.js"></script>
 </body>
+
 </html>

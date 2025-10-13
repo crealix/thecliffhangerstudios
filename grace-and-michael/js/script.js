@@ -114,3 +114,74 @@ const modal = document.getElementById("imageModal");
  modal.addEventListener("click", (e) => {
    if (e.target === modal) modal.style.display = "none";
  });
+
+
+ //////////BG music
+ document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById('bg-music');
+  const btn = document.getElementById('music-btn');
+  const story = document.getElementById('our-story');
+
+  let playing = false;
+  let triggered = false;
+
+  function fadeIn(audio, duration = 2000) {
+    audio.volume = 0;
+    const step = 0.05;
+    const interval = setInterval(() => {
+      if (audio.volume < 1) {
+        audio.volume = Math.min(audio.volume + step, 1);
+      } else {
+        clearInterval(interval);
+      }
+    }, duration / 20);
+  }
+
+  async function startMusic() {
+    if (playing) return;
+    try {
+      await music.play();
+      fadeIn(music);
+      playing = true;
+      btn.textContent = "⏸";
+      btn.classList.add("playing");
+    } catch (err) {
+      console.warn("Play blocked until user interacts:", err);
+    }
+  }
+
+  function pauseMusic() {
+    music.pause();
+    playing = false;
+    btn.textContent = "🎵";
+    btn.classList.remove("playing");
+  }
+
+  btn.addEventListener("click", () => {
+    triggered = true;
+    if (playing) pauseMusic();
+    else startMusic();
+  });
+
+  // 👇 Start music on first user interaction (tap, click, touch)
+  ["click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, () => {
+      if (!triggered) {
+        startMusic();
+        triggered = true;
+      }
+    }, { once: true });
+  });
+
+  // 👇 Also trigger when scrolling to #our-story AFTER first tap
+  if (story && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && triggered && !playing) {
+          startMusic();
+        }
+      });
+    }, { threshold: 0.3 });
+    observer.observe(story);
+  }
+});
