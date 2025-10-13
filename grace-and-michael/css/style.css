@@ -495,7 +495,8 @@ hr {
 
 /* RSVP Section */
 .qr {
-  width: 200px;
+  width: 20%;
+  height: auto;
   margin: 20px auto;
   display: block;
 }
