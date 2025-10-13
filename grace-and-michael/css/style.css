@@ -152,6 +152,15 @@ p, li {
   letter-spacing: 0.5px;
 }
 
+.hero-image {
+  width: 100%;          /* take full width of the container */
+  height: 100;         /* adjust height automatically (keeps proportion) */
+  display: block;       /* removes extra bottom spacing */
+  max-width: 2200px;    /* optional: set your preferred max width */
+  margin: 0 auto;       /* centers image if max-width is smaller than screen */
+  object-fit: cover;    /* ensures it won’t distort */
+}
+
   /* === Sections === */
 .section {
   /* padding: 60px 20px;
