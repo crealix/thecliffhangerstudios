@@ -119,6 +119,14 @@ p, li {
   letter-spacing: 1px;
 }
 
+.wedding-title-desc {
+  font-size: 20px;
+  font-weight: 500;
+  /* color: #444; */
+  /* margin-bottom: 10px; */
+  padding: 1rem;
+    letter-spacing: 1px;
+}
 .desc-text {
   font-size: 24px;
   /* color: #444; */
@@ -426,10 +434,10 @@ hr {
   margin-bottom: 1rem;
 }
 
-.our-story .text p {
+/* .our-story .text p {
   font-size: 1rem;
   line-height: 1.6;
-}
+} */
 
 .our-story .image {
   flex: 1 1 400px;
