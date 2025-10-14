@@ -1,5 +1,5 @@
 :root{
-  --accent:#ff6b6b;
+  --accent:#0077ff;
   --bg:#0f1720;
   --muted:#6b7280;
   --card:#ffffff;
@@ -60,7 +60,7 @@ body{
 
 /* event page hero overlay */
 .event-hero{position:relative;height:320px;overflow:hidden}
-.event-hero-img{width:100%;height:100%;object-fit:cover;display:block}
+.event-hero-img{width:100%;height:360px;object-fit:cover;display:block}
 .event-hero-overlay{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;padding:18px;color:#fff}
 .business-brand{display:flex;align-items:center;gap:12px; background:linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15)); padding:8px 12px;border-radius:8px}
 .small-logo{width:56px;height:56px;border-radius:8px;object-fit:cover}
@@ -72,7 +72,7 @@ body{
 .tabs-section{padding:20px 0}
 .tabs{display:flex;gap:8px;margin-bottom:12px}
 .tab-btn{background:#fff;border-radius:10px;padding:8px 14px;border:1px solid #e6eef6; cursor:pointer}
-.tab-btn.active{background:var(--accent); color:#fff; border-color:transparent}
+.tab-btn.active{background:#0077ff; color:#fff; border-color:transparent}
 
 /* gallery grid */
 .gallery-grid{display:grid; gap:var(--gap); grid-template-columns: repeat(4, 1fr)}
@@ -114,7 +114,7 @@ body{
 @media (max-width: 720px){
   .events-grid, .gallery-grid{grid-template-columns: repeat(2, 1fr)}
   .hero-img{height:220px}
-  .event-hero{height:220px}
+  .event-hero{height:520px}
   .nav-links{display:none}
   .burger{display:block}
 }
@@ -127,3 +127,55 @@ body{
 }
 .small{font-size:0.85rem}
 .muted{color:var(--muted)}
+
+
+.lazy-img {
+  opacity: 0;
+  transform: scale(0.97);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  width:100%; height:280px; object-fit:cover; display:block
+}
+.lazy-img.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+.load-more {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 25px;
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background 0.3s;
+}
+.load-more:hover {
+  background: #005fcc;
+}
+
+
+
+.video-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.video-thumb {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  object-fit: cover;
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
