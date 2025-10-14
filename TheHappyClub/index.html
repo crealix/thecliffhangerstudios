@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Happy Club — Events</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <div class="brand">
+        <img src="https://picsum.photos/seed/logo/80/80" alt="The Happy Club logo" class="logo">
+        <span class="site-title">The Happy Club</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#gallery">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="https://picsum.photos/seed/hero/1400/500" alt="Banner" class="hero-img">
+      <div class="hero-overlay container">
+        <h1>The Happy Club</h1>
+        <p>Memories captured one smile at a time</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="container events-section">
+      <h2>Events</h2>
+      <div id="eventsGrid" class="events-grid"></div>
+
+      <div id="eventsLoading" class="loading">Loading events...</div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <div>
+        <strong>The Happy Club</strong><br>
+        photobooth & event studio
+      </div>
+      <div>© <span id="year"></span> The Happy Club</div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // small boot
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // When page loads, init the index view
+    window.addEventListener('DOMContentLoaded', () => {
+      window.app && window.app.initIndex && window.app.initIndex();
+    });
+  </script>
+</body>
+</html>
