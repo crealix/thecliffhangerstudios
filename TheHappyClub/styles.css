@@ -51,22 +51,45 @@ body{
 .event-tile{background:#fff; border-radius:10px; overflow:hidden; box-shadow:var(--shadow); cursor:pointer; display:flex; flex-direction:column}
 .event-thumb{width:100%; height:160px; object-fit:cover; display:block}
 .event-meta{padding:10px 12px}
-.event-title{font-weight:700; font-size:1rem}
-.event-date{font-size:0.9rem;color:var(--muted); margin-top:6px}
+.event-title {
+  display: block;
+   width: 100%;
+   margin: 0;
+   font-weight: 700;
+   font-size: 1rem;
+   color: #fff;             /* change if needed */
+   text-align: left;
+}
 
+.event-date {
+  display: block;
+   width: 100%;
+   margin: 0;
+   font-size: 0.9rem;
+   text-align: left;
+   color:#f3f4f6
+}
 /* footer */
 .site-footer{background:#0077ff;border-top:1px solid #eef2f7;padding:18px 0;margin-top:28px}
 .loading{padding:18px;text-align:center;color:var(--muted)}
 
 /* event page hero overlay */
-.event-hero{position:relative;height:320px;overflow:hidden}
-.event-hero-img{width:100%;height:360px;object-fit:cover;display:block}
+.event-hero{position:relative;height:1585px;overflow:hidden}
+.event-hero-img{width:100%;height:1585px;object-fit:cover;display:block}
 .event-hero-overlay{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;padding:18px;color:#fff}
 .business-brand{display:flex;align-items:center;gap:12px; background:linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15)); padding:8px 12px;border-radius:8px}
 .small-logo{width:56px;height:56px;border-radius:8px;object-fit:cover}
-.event-title-block{text-align:right;background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.12)); padding:8px 12px;border-radius:8px}
-.event-title-block h2{margin:0;color:#fff}
-.event-date{color:#f3f4f6}
+.event-title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;   /* aligns children to the right edge */
+  gap: 4px;                /* small spacing between title and date */
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: none;          /* remove any gradient background */
+}
+/* .event-title-block h2{margin:0;color:#fff} */
+
 
 /* tabs */
 .tabs-section{padding:20px 0}
@@ -123,7 +146,7 @@ body{
   .hero-img{height:180px}
   .event-hero{height:180px}
   .event-hero-overlay{flex-direction:column; align-items:flex-start; gap:12px}
-  .event-title-block{text-align:left}
+  /* .event-title-block{text-align:right} */
 }
 .small{font-size:0.85rem}
 .muted{color:var(--muted)}
