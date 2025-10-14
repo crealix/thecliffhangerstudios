@@ -2,52 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Happy Club — Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="The Happy Club website">
+  <meta name="author" content="The Happy Club">
+  <meta name="robots" content="index,follow">
+  <meta property="og:url" content="{{url()->current()}}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logomainthehappyclub.jpg">
+  <meta property="og:site_name" content="The Happy Club" >
+  <meta property="og:image:width" content="1200" >
+  <meta property="og:image:height" content="630" >
+  <meta property="og:title" content="The Happy Club" >
+  <title>The Happy Club</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container">
       <div class="brand">
-        <img src="https://picsum.photos/seed/logo/80/80" alt="The Happy Club logo" class="logo">
+        <img src="logomainthehappyclub.jpg" alt="The Happy Club logo" class="logo">
         <span class="site-title">The Happy Club</span>
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="#gallery">Events</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <!-- <li><a href="#contact">Contact</a></li> -->
       </ul>
       <button class="burger" aria-label="Open menu" aria-expanded="false">☰</button>
     </nav>
   </header>
 
-  <main>
     <section class="hero">
-      <img src="https://picsum.photos/seed/hero/1400/500" alt="Banner" class="hero-img">
+      <img src="https://scontent.fmnl7-2.fna.fbcdn.net/v/t39.30808-6/477957193_122137362266558805_7800786173401736774_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGqp2RXMtvO48h5BItiUs5BWq0mU7n-sRdarSZTuf6xF9ZnLqjE6_ZeWi9Iws6ARflIrcm3zZJqUsK7VYBhL6K4&_nc_ohc=MH9ti8FCQ5gQ7kNvwEpfvgS&_nc_oc=Adki9-bXMbBUf4krf3c8f0NBWUh0KHJ32yCgI-OzRNA7UUMWjwoiuVwbGsbV8TRdcTM&_nc_zt=23&_nc_ht=scontent.fmnl7-2.fna&_nc_gid=ncry0p_tutZ83mRZrxlswQ&oh=00_AffG1xSAeK6sWQzoiRfICds9AnbWYusRYp2FVv8r9wzmIQ&oe=68F44563" alt="Banner" class="hero-img">
       <div class="hero-overlay container">
         <h1>The Happy Club</h1>
-        <p>Memories captured one smile at a time</p>
+        <p>Zoom in to happiness at The Happy Club! 🥳<br>
+          Book us now for your photobooth needs. 📸</p>
       </div>
     </section>
 
-    <section id="gallery" class="container events-section">
-      <h2>Events</h2>
-      <div id="eventsGrid" class="events-grid"></div>
-
-      <div id="eventsLoading" class="loading">Loading events...</div>
-    </section>
-  </main>
-
-  <footer id="contact" class="site-footer">
     <div class="container">
-      <div>
-        <strong>The Happy Club</strong><br>
-        photobooth & event studio
+
+
+    <section id="gallery">
+      <h2>Events</h2>
+      <div id="eventsGrid" class="events-grid">
+
+        <a href="2025-Soccomm-ball.html" class="event-tile">
+          <img src="images/20251004OLLPSoccommBall/soccommballcover.jpg" alt="Event 2" class="event-thumb">
+          <div class="event-meta">
+            <div class="event-title-home">Ricky@75</div>
+            <div class="event-date-home">October 11, 2025</div>
+          </div>
+        </a>
+        <a href="2025-Soccomm-ball.html" class="event-tile">
+          <img src="images/20251004OLLPSoccommBall/soccommballcover.jpg" alt="Event 2" class="event-thumb">
+          <div class="event-meta">
+            <div class="event-title-home">Soccomm ball</div>
+            <div class="event-date-home">October 04, 2025</div>
+          </div>
+        </a>
+        <a href="2025-Soccomm-ball.html" class="event-tile">
+          <img src="images/20251004OLLPSoccommBall/soccommballcover.jpg" alt="Event 2" class="event-thumb">
+          <div class="event-meta">
+            <div class="event-title-home">Mary The Queen Fiesta 2025</div>
+            <div class="event-date-home">August 24, 2025</div>
+          </div>
+        </a>
+
+
+
+
       </div>
-      <div>© <span id="year"></span> The Happy Club</div>
-    </div>
-  </footer>
+    </section>
+      </div>
+    <!-- <div class="container my-5" >
+      <h3 class="mb-4">Related</h3>
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <a href="2025-Soccomm-ball.html">
+            <img src="images/20251004OLLPSoccommBall/soccommballcover.jpg" class="related-album-cover-img" alt="Related 1">
+          </a>
+          <p class="home-text-gallery-title fw-semibold mt-2">Soccomm ball</p>
+          <p class="gallery-text-desc">October 04, 2025</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <a href="2025-Soccomm-ball.html">
+            <img src="images/20251004OLLPSoccommBall/soccommballcover.jpg" class="related-album-cover-img" alt="Related 1">
+          </a>
+          <p class="home-text-gallery-title fw-semibold mt-2">Soccomm ball</p>
+          <p class="gallery-text-desc">October 04, 2025</p>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <a href="2025-Soccomm-ball.html">
+            <img src="images/20251004OLLPSoccommBall/soccommballcover.jpg" class="related-album-cover-img" alt="Related 1">
+          </a>
+          <p class="home-text-gallery-title fw-semibold mt-2">Soccomm ball</p>
+          <p class="gallery-text-desc">October 04, 2025</p>
+        </div>
+      </div>
+    </div> -->
+
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <p class="footer-email">📧 thehappyclub.biz@gmail.com</p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col footer-social">
+          <a href="https://www.facebook.com/thehappyclub" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/cliffhangerstudios.ph/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@thecliffhangerstudios" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="https://www.youtube.com/@TheCliffhangerStudios/" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <p class="footer-copy">© <span id="year2"></span> The Happy Club</p>
+        </div>
+      </div>
+    </footer>
+
 
   <script src="main.js"></script>
   <script>
