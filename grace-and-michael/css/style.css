@@ -113,9 +113,10 @@ p, li {
   /* font-weight: normal; */
   color: #071E07; /* Olive green titles old color 254117*/
   text-align: center;
-  font-size: 42px;
+  font-size: 2.4rem;
+  /* font-size: 42px; */
   /* font-size: 93px; */
-  font-weight: 500;
+  font-weight: 100;
   letter-spacing: 1px;
 }
 
@@ -362,7 +363,8 @@ hr {
   display: none;
  }
  .desc-text {
-   font-size: 12px;
+   /* font-size: 12px; */
+   ont-size: 0.9rem;
    padding: 1rem;
  }
 }
@@ -1002,6 +1004,7 @@ footer a:hover {
   max-width: 700px;
   margin: 0 auto 30px;
   color: #555;
+  font-size: 1.2rem;
 }
 
 /* Grid gallery - uniform size */
@@ -1076,9 +1079,6 @@ footer a:hover {
   .venue-gallery {
     grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
   }
-  .date-display h2 {
-    font-size: 3.7rem;
-  }
 }
 
 @media (max-width: 576px) {
@@ -1088,9 +1088,6 @@ footer a:hover {
 
   .venue-gallery img {
     height: 200px; /* Slightly smaller for small screens */
-  }
-  .date-display h2 {
-    font-size: 3.4rem;
   }
 }
 
@@ -1138,7 +1135,7 @@ footer a:hover {
 }
 
 .wedding-header .small-text {
-  /* font-size: 0.9rem; */
+  font-size: 0.6rem;
   letter-spacing: 2px;
   text-align: center;
 }
@@ -1162,7 +1159,7 @@ footer a:hover {
 }
 
 .date-display {
-  /* font-size: 5.4rem; */
+  font-size: 5.4rem;
   font-weight: 100;
   margin: 8px 0;
   margin-bottom:120px;
@@ -1170,14 +1167,14 @@ footer a:hover {
 }
 
 .invite-title {
-  font-size: 1.4rem;
+  font-size: 2.4rem;
   text-align: center;
   margin: 10px 0;
   font-weight: 700;
 }
 
 .invite-desc {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom:120px;
 }
@@ -1192,6 +1189,7 @@ footer a:hover {
   /* justify-content: space-between; */
   text-align: center;
   /* background: #000; */
+
   color: #000;
   padding: 10px 20px;
   font-weight: 700;
@@ -1244,4 +1242,72 @@ footer a:hover {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* 🌸 Responsive Styles */
+@media (max-width: 768px) {
+  .wedding-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .date-display {
+    font-size: 2rem;
+    letter-spacing: 4px;
+  }
+
+  .invite-title {
+    font-size: 1.2rem;
+  }
+
+  .invite-desc {
+    font-size: 0.95rem;
+  }
+
+  .calendar-section {
+    width: 95%;
+    margin-top: 30px;
+  }
+
+  .calendar-header {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .day {
+    padding: 8px 0;
+    font-size: 0.85rem;
+  }
+
+  .day.highlight::after {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-display {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+  }
+  .wedding-title {
+    font-family: 'Baskerville Display PT';
+    color: #071E07;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+  .venue-desc {
+    font-size: 0.9rem;
+  }
+  .calendar-section {
+    width: 90%;
+  }
+
+  .day {
+    font-size: 0.8rem;
+  }
+
+  .day.highlight::after {
+    font-size: 1.1rem;
+  }
 }
