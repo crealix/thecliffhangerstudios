@@ -185,3 +185,27 @@ const modal = document.getElementById("imageModal");
     observer.observe(story);
   }
 });
+///calendar
+document.addEventListener("DOMContentLoaded", () => {
+  const calendarDays = document.getElementById("calendar-days");
+
+  const year = 2025;
+  const month = 11; // December (0-based index)
+  const totalDays = new Date(year, month + 1, 0).getDate();
+  const firstDay = new Date(year, month, 1).getDay();
+
+  // Add empty slots before 1st
+  for (let i = 0; i < firstDay; i++) {
+    const empty = document.createElement("div");
+    calendarDays.appendChild(empty);
+  }
+
+  // Generate days
+  for (let day = 1; day <= totalDays; day++) {
+    const div = document.createElement("div");
+    div.textContent = day;
+    div.classList.add("day");
+    if (day === 27) div.classList.add("highlight");
+    calendarDays.appendChild(div);
+  }
+});

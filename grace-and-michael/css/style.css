@@ -45,7 +45,7 @@ body {
    font-size: 16px;
    line-height: 1.6;
    color: #0D330E; /* Dark green text */
-   background-color: #EEEFE0; /* Cream base background */
+   /*background-color: #EEEFE0; /* Cream base background */
  }
  p,a,b {
     font-family: 'Montserrat', sans-serif;
@@ -1124,4 +1124,118 @@ footer a:hover {
     bottom: 75px;
     right: 15px;
   }
+}
+
+
+.wedding-header {
+  margin-top: 40px;
+}
+
+.wedding-header .small-text {
+  /* font-size: 0.9rem; */
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.wedding-header h1 {
+  /* font-family: 'Playfair Display', serif; */
+  /* font-size: 2rem; */
+  text-align: center;
+  margin: 8px 0 12px;
+}
+
+.save-date {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.save-text {
+  font-size: 0.9rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.date-display {
+  font-size: 5.4rem;
+  /* font-weight: 700; */
+  margin: 8px 0;
+  margin-bottom:120px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.invite-title {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.invite-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom:120px;
+}
+
+.calendar-section {
+  margin: 50px auto;
+  width: fit-content;
+}
+
+.calendar-header {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  text-align: center;
+  /* background: #000; */
+  color: #000;
+  padding: 10px 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 45px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 45px;
+  margin-top: 6px;
+}
+
+.day {
+  padding: 10px 0;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.day.highlight {
+  font-weight: bold;
+  position: relative;
+}
+
+.day.highlight::after {
+  content: "♡";
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  font-size: 2.6rem;
+  color: #0D330E;
+  pointer-events: none;
+}
+
+.couple-banner {
+  position: relative;
+}
+
+.couple-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
