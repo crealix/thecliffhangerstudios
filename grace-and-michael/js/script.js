@@ -16,12 +16,12 @@ fadeEls.forEach(el => {
 });
 
 // Navbar toggle for mobile
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+// const navToggle = document.getElementById('navToggle');
+// const navLinks = document.getElementById('navLinks');
+//
+// navToggle.addEventListener('click', () => {
+//   navLinks.classList.toggle('show');
+// });
 
 // Back to Top Button
 const backToTopBtn = document.getElementById('backToTopBtn');
