@@ -128,10 +128,10 @@ p, li {
 }
 .desc-text {
   /* font-size: 24px; */
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   /* color: #444; */
   /* margin-bottom: 10px; */
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 .wedding-sub-name-title {
   font-family: 'Baskerville Display PT';
@@ -159,6 +159,16 @@ p, li {
   max-width: 2200px;    /* optional: set your preferred max width */
   margin: 0 auto;       /* centers image if max-width is smaller than screen */
   object-fit: cover;    /* ensures it won’t distort */
+
+  /* position: relative; */
+  /* min-height: 100vh; /* full screen */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* text-align: center; */
+  /* color: white;
+  font-family: 'Montserrat', sans-serif;
+  background: url('../images/prenup/GRACE&MICHAEL-16.jpg') center/cover no-repeat; */
 }
 
   /* === Sections === */
@@ -243,7 +253,7 @@ hr {
  text-align: center;
  color: white;
  font-family: 'Montserrat', sans-serif;
- background: url('../images/prenup/official-banner.jpg') center/cover no-repeat;
+ background: url('../images/prenup/GRACE&MICHAEL-16.jpg') center/cover no-repeat;
 }
 
 /* Dark overlay */
@@ -295,7 +305,8 @@ hr {
 
 /* Couple names */
 .couple-names {
-   font-family: 'Baskerville Display PT', cursive;
+   /* font-family: 'Baskerville Display PT', cursive; */
+   font-family: 'Baskerville Display PT';
    font-size: 60px;
    margin: 20px 0;
 }
@@ -926,7 +937,7 @@ footer a:hover {
 /* Section style venue-section */
 .venue-section {
   text-align: center;
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
   background-color: #fafafa;
 }
 
@@ -1073,7 +1084,7 @@ footer a:hover {
 .wedding-header h1 {
   /* font-family: 'Playfair Display', serif; */
   font-size: 3rem;
-  font-family: 'Baskerville Display PT';
+  /* font-family: 'Baskerville Display PT'; */
   text-align: center;
   font-weight: 100;
   margin: 1px;
@@ -1108,7 +1119,7 @@ footer a:hover {
 
 .invite-desc {
   font-size: 1.2rem;
-  line-height: 2.6;
+  /* line-height: 2.6; */
   margin-bottom:120px;
 }
 
@@ -1217,7 +1228,7 @@ footer a:hover {
     }
     .desc-text {
       /* font-size: 14px; */
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       padding: 1rem;
     }
 
@@ -1302,7 +1313,7 @@ footer a:hover {
       display: none;
     }
     .desc-text {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       padding: 1rem;
     }
 
