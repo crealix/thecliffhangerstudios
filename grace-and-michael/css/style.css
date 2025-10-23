@@ -113,9 +113,7 @@ p, li {
   /* font-weight: normal; */
   color: #071E07; /* Olive green titles old color 254117*/
   text-align: center;
-  font-size: 2.4rem;
-  /* font-size: 42px; */
-  /* font-size: 93px; */
+  font-size: 3rem;
   font-weight: 100;
   letter-spacing: 1px;
 }
@@ -130,7 +128,7 @@ p, li {
 }
 .desc-text {
   /* font-size: 24px; */
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   /* color: #444; */
   /* margin-bottom: 10px; */
   padding: 1rem;
@@ -297,79 +295,26 @@ hr {
 
 /* Couple names */
 .couple-names {
- font-family: 'Baskerville Display PT', cursive;
- font-size: 60px;
- margin: 20px 0;
+   font-family: 'Baskerville Display PT', cursive;
+   font-size: 60px;
+   margin: 20px 0;
 }
 
 .decorative-line {
- margin: 20px auto;
- width: 150px;
- height: 2px;
- background: white;
- border-radius: 2px;
+   margin: 20px auto;
+   width: 150px;
+   height: 2px;
+   background: white;
+   border-radius: 2px;
 }
 
 .banner-subtitle {
- font-size: 16px;
- font-weight: 300;
- margin-top: 20px;
- color: #FAF9EE;
+   font-size: 16px;
+   font-weight: 300;
+   margin-top: 20px;
+   color: #FAF9EE;
 }
 
-/* ===== MOBILE FIXES ===== */
-@media (max-width: 768px) {
- .banner {
-   min-height: 70vh; /* reduce height on smaller screens */
-   background-position: center top; /* crop from top */
- }
- .couple-names {
-   font-size: 38px;
- }
- .wedding-date .day {
-   font-size: 38px;
- }
- .wedding-date {
-   font-size: 14px;
-   gap: 5px;
- }
- .banner-subtitle {
-   font-size: 14px;
-   padding: 0 10px;
- }
- .divider {
-  display: none; /* ✅ hide dividers on mobile */
- }
- .desc-text {
-   /* font-size: 14px; */
-   font-size: 0.9rem;
-   padding: 1rem;
- }
-}
-
-@media (max-width: 480px) {
- .banner {
-   min-height: 60vh;
-   background-position: center;
- }
- .couple-names {
-   font-size: 32px;
- }
- .wedding-date .day {
-   font-size: 32px;
- }
- .wedding-date {
-   font-size: 12px;
- }
- .divider {
-  display: none;
- }
- .desc-text {
-   /* font-size: 12px; */
-   font-size: 0.9rem;
-   padding: 1rem;
- }
-}
 /* Hero Section */
 .hero {
   position: relative;
@@ -1163,7 +1108,7 @@ footer a:hover {
 
 .invite-desc {
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 2.6;
   margin-bottom:120px;
 }
 
@@ -1191,6 +1136,7 @@ footer a:hover {
   margin-top: 10px;
   font-size: 1rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .days-grid {
@@ -1198,6 +1144,7 @@ footer a:hover {
   grid-template-columns: repeat(7, 1fr);
   gap: 45px;
   margin-top: 6px;
+  text-align: center;
 }
 
 .day {
@@ -1215,7 +1162,7 @@ footer a:hover {
   content: "♡";
   position: absolute;
   top: 50%;
-  left: 20%;
+  left: 48%;
   transform: translate(-50%, -50%);
   font-size: 2.6rem;
   color: #0D330E;
@@ -1238,15 +1185,42 @@ footer a:hover {
 
   .day.highlight::after {
     top: 50%;
-    left: 20%;
+    left: 48%;
     transform: translate(-50%, -50%);
     font-size: 2.6rem;
   }
 
 }
 
-  /* Mobile view na ito */
+/* ===== MOBILE FIXES ===== */
 @media (max-width: 768px) {
+    .banner {
+      min-height: 70vh; /* reduce height on smaller screens */
+      background-position: center top; /* crop from top */
+    }
+    .couple-names {
+      font-size: 38px;
+    }
+    .wedding-date .day {
+      font-size: 38px;
+    }
+    .wedding-date {
+      font-size: 14px;
+      gap: 5px;
+    }
+    .banner-subtitle {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+    .divider {
+      display: none; /* ✅ hide dividers on mobile */
+    }
+    .desc-text {
+      /* font-size: 14px; */
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+
     .project-gallery {grid-template-columns: repeat(2, 1fr);}
 
     .wedding-header h1 {
@@ -1257,13 +1231,17 @@ footer a:hover {
       font-size: 2rem;
       letter-spacing: 4px;
     }
-
+    .wedding-title {
+      font-size: 2.6rem;
+      font-weight: 100;
+      letter-spacing: 1px;
+    }
     .invite-title {
       font-size: 1.2rem;
     }
 
     .invite-desc {
-      font-size: 0.95rem;
+      font-size: 1.4rem;
     }
 
     .calendar-section {
@@ -1272,7 +1250,7 @@ footer a:hover {
     }
 
     .calendar-header {
-      font-size: 0.9rem;
+      font-size: 1.2rem;
       padding: 8px 12px;
     }
 
@@ -1289,29 +1267,17 @@ footer a:hover {
       font-size: 0.8rem;
       font-weight: bold;
     }
-    /* .days-header {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 45px;
-      margin-top: 10px;
-      font-size: 1rem;
-      font-weight: bold;
-    } */
+
     .days-grid {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       gap: 4px;
       margin-top: 6px;
     }
-    /* .days-grid {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      gap: 45px;
-      margin-top: 6px;
-    } */
+
     .day.highlight::after {
       top: 50%;
-      left: 8%;
+      left: 48%;
       transform: translate(-50%, -50%);
       font-size: 2.6rem;
     }
@@ -1319,21 +1285,46 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
+    .banner {
+      min-height: 60vh;
+      background-position: center;
+    }
+    .couple-names {
+      font-size: 32px;
+    }
+    .wedding-date .day {
+      font-size: 32px;
+    }
+    .wedding-date {
+      font-size: 12px;
+    }
+    .divider {
+      display: none;
+    }
+    .desc-text {
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+
     .project-gallery {grid-template-columns: repeat(2, 1fr);}
     .date-display {
       font-size: 2.8rem;
       letter-spacing: 3px;
     }
     .wedding-title {
-      font-family: 'Baskerville Display PT';
-      color: #071E07;
-      text-align: center;
-      font-size: 1.6rem;
+      font-size: 2.6rem;
       font-weight: 100;
       letter-spacing: 1px;
     }
+    .invite-title {
+      font-size: 1.5rem;
+    }
+
+    .invite-desc {
+      font-size: 1.2rem;
+    }
     .venue-desc {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
     }
     .calendar-section {
       width: 80%;
@@ -1361,7 +1352,7 @@ footer a:hover {
 
     .day.highlight::after {
       top: 50%;
-      left: 15%;
+      left: 48%;
       transform: translate(-50%, -50%);
       font-size: 2.6rem;
     }
@@ -1370,6 +1361,16 @@ footer a:hover {
 }
 @media (max-width: 390px) {
   .project-gallery {grid-template-columns: repeat(1, 1fr);}
+
+  .day.highlight::after {
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem;
+  }
+  .invite-desc {
+    font-size: 1rem;
+  }
 }
 
 /* 🌸 Responsive Styles */
