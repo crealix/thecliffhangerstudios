@@ -978,23 +978,6 @@ footer a:hover {
   to {opacity: 1;}
 }
 
-/* Responsive Adjustments project-gallery */
-@media (max-width: 1024px) {
-  .project-gallery {grid-template-columns: repeat(4, 1fr);}
-}
-
-@media (max-width: 768px) {
-.project-gallery {grid-template-columns: repeat(2, 1fr);}
-}
-
-@media (max-width: 480px) {
-.project-gallery {grid-template-columns: repeat(2, 1fr);}
-}
-@media (max-width: 390px) {
-.project-gallery {grid-template-columns: repeat(1, 1fr);}
-}
-
-
 /* Section style venue-section */
 .venue-section {
   text-align: center;
@@ -1185,7 +1168,7 @@ footer a:hover {
 }
 
 .calendar-section {
-  margin: 50px auto;
+  margin: 20px auto;
   width: fit-content;
 }
 
@@ -1249,70 +1232,151 @@ footer a:hover {
   display: block;
 }
 
-/* 🌸 Responsive Styles */
-@media (max-width: 768px) {
-  .wedding-header h1 {
-    font-size: 1.9rem;
-  }
-
-  .date-display {
-    font-size: 2rem;
-    letter-spacing: 4px;
-  }
-
-  .invite-title {
-    font-size: 1.2rem;
-  }
-
-  .invite-desc {
-    font-size: 0.95rem;
-  }
-
-  .calendar-section {
-    width: 95%;
-    margin-top: 30px;
-  }
-
-  .calendar-header {
-    font-size: 0.9rem;
-    padding: 8px 12px;
-  }
-
-  .day {
-    padding: 8px 0;
-    font-size: 0.85rem;
-  }
+/* Responsive Adjustments project-gallery */
+@media (max-width: 1024px) {
+  .project-gallery {grid-template-columns: repeat(4, 1fr);}
 
   .day.highlight::after {
-    font-size: 1.3rem;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6rem;
   }
+
+}
+
+  /* Mobile view na ito */
+@media (max-width: 768px) {
+    .project-gallery {grid-template-columns: repeat(2, 1fr);}
+
+    .wedding-header h1 {
+      font-size: 1.9rem;
+    }
+
+    .date-display {
+      font-size: 2rem;
+      letter-spacing: 4px;
+    }
+
+    .invite-title {
+      font-size: 1.2rem;
+    }
+
+    .invite-desc {
+      font-size: 0.95rem;
+    }
+
+    .calendar-section {
+      width: 95%;
+      margin-top: 30px;
+    }
+
+    .calendar-header {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+    }
+
+    .day {
+      padding: 8px 0;
+      font-size: 0.85rem;
+    }
+
+    .days-header {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    /* .days-header {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 45px;
+      margin-top: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+    } */
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin-top: 6px;
+    }
+    /* .days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 45px;
+      margin-top: 6px;
+    } */
+    .day.highlight::after {
+      top: 50%;
+      left: 8%;
+      transform: translate(-50%, -50%);
+      font-size: 2.6rem;
+    }
+
 }
 
 @media (max-width: 480px) {
-  .date-display {
-    font-size: 2.8rem;
-    letter-spacing: 3px;
-  }
-  .wedding-title {
-    font-family: 'Baskerville Display PT';
-    color: #071E07;
-    text-align: center;
-    font-size: 1.6rem;
-    font-weight: 100;
-    letter-spacing: 1px;
-  }
-  .venue-desc {
-    font-size: 0.9rem;
-  }
-  .calendar-section {
-    width: 90%;
-  }
+    .project-gallery {grid-template-columns: repeat(2, 1fr);}
+    .date-display {
+      font-size: 2.8rem;
+      letter-spacing: 3px;
+    }
+    .wedding-title {
+      font-family: 'Baskerville Display PT';
+      color: #071E07;
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 100;
+      letter-spacing: 1px;
+    }
+    .venue-desc {
+      font-size: 0.9rem;
+    }
+    .calendar-section {
+      width: 80%;
+    }
 
-  .day {
-    font-size: 0.8rem;
-  }
+    .day {
+      font-size: 0.8rem;
+    }
 
-  .day.highlight::after {
-    font-size: 1.1rem;
-  }
+    .days-header {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .day.highlight::after {
+      top: 50%;
+      left: 15%;
+      transform: translate(-50%, -50%);
+      font-size: 2.6rem;
+    }
+
+
 }
+@media (max-width: 390px) {
+  .project-gallery {grid-template-columns: repeat(1, 1fr);}
+}
+
+/* 🌸 Responsive Styles */
+/* @media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+} */
