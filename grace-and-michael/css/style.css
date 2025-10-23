@@ -45,7 +45,7 @@ body {
    font-size: 16px;
    line-height: 1.6;
    color: #0D330E; /* Dark green text */
-   background-color: #EEEFE0; /* Cream base background */
+   background-color: #fafafa; /* Cream base background */
  }
  p,a,b {
     font-family: 'Montserrat', sans-serif;
@@ -88,18 +88,19 @@ p, li {
   font-weight: 600;
   font-size: 16px;
   padding: 12px 28px;
-  border: none;
+  border: 2px solid #0D330E; /* Olive green border */
   border-radius: 30px;
-  background: #0D330E; /* Olive green */
-  color: white;
+  background: transparent; /* No background */
+  color: #0D330E; /* Match text color with border */
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
   display: inline-block;
 }
 
 .rsvp-button:hover {
-  background: #2D531A; /* Darker green hover */
+  background: #0D330E; /* Fill on hover */
+  color: white; /* Invert text color */
 }
 
 /* === Customize text Behavior === */
@@ -113,9 +114,8 @@ p, li {
   /* font-weight: normal; */
   color: #071E07; /* Olive green titles old color 254117*/
   text-align: center;
-  font-size: 42px;
-  /* font-size: 93px; */
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 100;
   letter-spacing: 1px;
 }
 
@@ -128,10 +128,11 @@ p, li {
     letter-spacing: 1px;
 }
 .desc-text {
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: 1.4rem;
   /* color: #444; */
   /* margin-bottom: 10px; */
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 .wedding-sub-name-title {
   font-family: 'Baskerville Display PT';
@@ -159,6 +160,16 @@ p, li {
   max-width: 2200px;    /* optional: set your preferred max width */
   margin: 0 auto;       /* centers image if max-width is smaller than screen */
   object-fit: cover;    /* ensures it won’t distort */
+
+  /* position: relative; */
+  /* min-height: 100vh; /* full screen */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* text-align: center; */
+  /* color: white;
+  font-family: 'Montserrat', sans-serif;
+  background: url('../images/prenup/GRACE&MICHAEL-16.jpg') center/cover no-repeat; */
 }
 
   /* === Sections === */
@@ -243,7 +254,7 @@ hr {
  text-align: center;
  color: white;
  font-family: 'Montserrat', sans-serif;
- background: url('../images/prenup/official-banner.jpg') center/cover no-repeat;
+ background: url('../images/prenup/GRACE&MICHAEL-16.jpg') center/cover no-repeat;
 }
 
 /* Dark overlay */
@@ -295,77 +306,27 @@ hr {
 
 /* Couple names */
 .couple-names {
- font-family: 'Baskerville Display PT', cursive;
- font-size: 60px;
- margin: 20px 0;
+   /* font-family: 'Baskerville Display PT', cursive; */
+   font-family: 'Baskerville Display PT';
+   font-size: 60px;
+   margin: 20px 0;
 }
 
 .decorative-line {
- margin: 20px auto;
- width: 150px;
- height: 2px;
- background: white;
- border-radius: 2px;
+   margin: 20px auto;
+   width: 150px;
+   height: 2px;
+   background: white;
+   border-radius: 2px;
 }
 
 .banner-subtitle {
- font-size: 16px;
- font-weight: 300;
- margin-top: 20px;
- color: #FAF9EE;
+   font-size: 16px;
+   font-weight: 300;
+   margin-top: 20px;
+   color: #FAF9EE;
 }
 
-/* ===== MOBILE FIXES ===== */
-@media (max-width: 768px) {
- .banner {
-   min-height: 70vh; /* reduce height on smaller screens */
-   background-position: center top; /* crop from top */
- }
- .couple-names {
-   font-size: 38px;
- }
- .wedding-date .day {
-   font-size: 38px;
- }
- .wedding-date {
-   font-size: 14px;
-   gap: 5px;
- }
- .banner-subtitle {
-   font-size: 14px;
-   padding: 0 10px;
- }
- .divider {
-  display: none; /* ✅ hide dividers on mobile */
- }
- .desc-text {
-   font-size: 14px;
-   padding: 1rem;
- }
-}
-
-@media (max-width: 480px) {
- .banner {
-   min-height: 60vh;
-   background-position: center;
- }
- .couple-names {
-   font-size: 32px;
- }
- .wedding-date .day {
-   font-size: 32px;
- }
- .wedding-date {
-   font-size: 12px;
- }
- .divider {
-  display: none;
- }
- .desc-text {
-   font-size: 12px;
-   padding: 1rem;
- }
-}
 /* Hero Section */
 .hero {
   position: relative;
@@ -670,16 +631,16 @@ footer a:hover {
 
     .faq-item {
       border: 2px solid #00334e;
-      background-color: white;
+      /* background-color: white; */
       border-radius: 5px;
       margin-bottom: 1rem;
       overflow: hidden;
     }
 
     .faq-question {
-      background-color: #FAF9EE;
+      /* background-color: #FAF9EE; */
       font-family: 'Montserrat', sans-serif;
-      color: #0D330E;
+      color: #333;
       font-weight: bold;
       padding: 1rem;
       display: flex;
@@ -695,7 +656,7 @@ footer a:hover {
     }
 
     .faq-answer {
-      background-color: #FAF9EE;
+      /* background-color: #FAF9EE; */
       font-family: 'Montserrat', sans-serif;
       padding: 1rem;
       display: none;
@@ -938,7 +899,7 @@ footer a:hover {
   margin-left: 18px;
   margin-right: 18px;
   /* grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); */
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
 .project-gallery img {
@@ -974,27 +935,10 @@ footer a:hover {
   to {opacity: 1;}
 }
 
-/* Responsive Adjustments project-gallery */
-@media (max-width: 1024px) {
-  .project-gallery {grid-template-columns: repeat(3, 1fr);}
-}
-
-@media (max-width: 768px) {
-.project-gallery {grid-template-columns: repeat(2, 1fr);}
-}
-
-@media (max-width: 480px) {
-.project-gallery {grid-template-columns: repeat(2, 1fr);}
-}
-@media (max-width: 390px) {
-.project-gallery {grid-template-columns: repeat(1, 1fr);}
-}
-
-
 /* Section style venue-section */
 .venue-section {
   text-align: center;
-  padding: 60px 20px;
+  /* padding: 60px 20px; */
   background-color: #fafafa;
 }
 
@@ -1002,6 +946,7 @@ footer a:hover {
   max-width: 700px;
   margin: 0 auto 30px;
   color: #555;
+  font-size: 1.2rem;
 }
 
 /* Grid gallery - uniform size */
@@ -1125,3 +1070,326 @@ footer a:hover {
     right: 15px;
   }
 }
+
+
+.wedding-header {
+  margin-top: 27px;
+}
+
+.wedding-header .small-text {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.wedding-header h1 {
+  /* font-family: 'Playfair Display', serif; */
+  font-size: 3rem;
+  /* font-family: 'Baskerville Display PT'; */
+  text-align: center;
+  font-weight: 100;
+  margin: 1px;
+}
+
+.save-date {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.save-text {
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.date-display {
+  font-size: 5.4rem;
+  font-weight: 100;
+  margin: 8px 0;
+  margin-bottom:120px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.invite-title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.invite-desc {
+  font-size: 1.2rem;
+  /* line-height: 2.6; */
+  margin-bottom:120px;
+}
+
+.calendar-section {
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.calendar-header {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  text-align: center;
+  /* background: #000; */
+
+  color: #000;
+  padding: 10px 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 45px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 45px;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.day {
+  padding: 10px 0;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.day.highlight {
+  font-weight: bold;
+  position: relative;
+}
+
+.day.highlight::after {
+  content: "♡";
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  font-size: 2.6rem;
+  color: #0D330E;
+  pointer-events: none;
+}
+
+.couple-banner {
+  position: relative;
+}
+
+.couple-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive Adjustments project-gallery */
+@media (max-width: 1024px) {
+  .project-gallery {grid-template-columns: repeat(4, 1fr);}
+
+  .day.highlight::after {
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    font-size: 2.6rem;
+  }
+
+}
+
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+    .banner {
+      min-height: 70vh; /* reduce height on smaller screens */
+      background-position: center top; /* crop from top */
+    }
+    .couple-names {
+      font-size: 38px;
+    }
+    .wedding-date .day {
+      font-size: 38px;
+    }
+    .wedding-date {
+      font-size: 14px;
+      gap: 5px;
+    }
+    .banner-subtitle {
+      font-size: 14px;
+      padding: 0 10px;
+    }
+    .divider {
+      display: none; /* ✅ hide dividers on mobile */
+    }
+    .desc-text {
+      /* font-size: 14px; */
+      font-size: 1.2rem;
+      padding: 1rem;
+    }
+
+    .project-gallery {grid-template-columns: repeat(2, 1fr);}
+
+    .wedding-header h1 {
+      font-size: 1.9rem;
+    }
+
+    .date-display {
+      font-size: 2rem;
+      letter-spacing: 4px;
+    }
+    .wedding-title {
+      font-size: 2.6rem;
+      font-weight: 100;
+      letter-spacing: 1px;
+    }
+    .invite-title {
+      font-size: 1.2rem;
+    }
+
+    .invite-desc {
+      font-size: 1.4rem;
+    }
+
+    .calendar-section {
+      width: 95%;
+      margin-top: 30px;
+    }
+
+    .calendar-header {
+      font-size: 1.2rem;
+      padding: 8px 12px;
+    }
+
+    .day {
+      padding: 8px 0;
+      font-size: 0.85rem;
+    }
+
+    .days-header {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .day.highlight::after {
+      top: 50%;
+      left: 48%;
+      transform: translate(-50%, -50%);
+      font-size: 2.6rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .banner {
+      min-height: 60vh;
+      background-position: center;
+    }
+    .couple-names {
+      font-size: 32px;
+    }
+    .wedding-date .day {
+      font-size: 32px;
+    }
+    .wedding-date {
+      font-size: 12px;
+    }
+    .divider {
+      display: none;
+    }
+    .desc-text {
+      font-size: 1.1rem;
+      padding: 1rem;
+    }
+
+    .project-gallery {grid-template-columns: repeat(2, 1fr);}
+    .date-display {
+      font-size: 2.8rem;
+      letter-spacing: 3px;
+    }
+    .wedding-title {
+      font-size: 2.6rem;
+      font-weight: 100;
+      letter-spacing: 1px;
+    }
+    .invite-title {
+      font-size: 1.5rem;
+    }
+
+    .invite-desc {
+      font-size: 1.2rem;
+    }
+    .venue-desc {
+      font-size: 1.1rem;
+    }
+    .calendar-section {
+      width: 80%;
+    }
+
+    .day {
+      font-size: 0.8rem;
+    }
+
+    .days-header {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .day.highlight::after {
+      top: 50%;
+      left: 48%;
+      transform: translate(-50%, -50%);
+      font-size: 2.6rem;
+    }
+
+
+}
+@media (max-width: 390px) {
+  .project-gallery {grid-template-columns: repeat(1, 1fr);}
+
+  .day.highlight::after {
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2rem;
+  }
+  .invite-desc {
+    font-size: 1rem;
+  }
+}
+
+/* 🌸 Responsive Styles */
+/* @media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+
+} */
