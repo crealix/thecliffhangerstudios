@@ -88,18 +88,19 @@ p, li {
   font-weight: 600;
   font-size: 16px;
   padding: 12px 28px;
-  border: none;
+  border: 2px solid #0D330E; /* Olive green border */
   border-radius: 30px;
-  background: #0D330E; /* Olive green */
-  color: white;
+  background: transparent; /* No background */
+  color: #0D330E; /* Match text color with border */
   cursor: pointer;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
   display: inline-block;
 }
 
 .rsvp-button:hover {
-  background: #2D531A; /* Darker green hover */
+  background: #0D330E; /* Fill on hover */
+  color: white; /* Invert text color */
 }
 
 /* === Customize text Behavior === */
