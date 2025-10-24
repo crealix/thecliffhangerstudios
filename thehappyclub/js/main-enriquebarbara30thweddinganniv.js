@@ -4,11 +4,11 @@
   const SAMPLE_EVENTS = [
     {
       id: 'e1',
-      title: '20250824MTQFiesta',
+      title: '20250426EnriqueBarbaraWeddingAnniv',
       date: 'October 04, 2025',
-      banner: 'images/20250824MTQFiesta/cover.jpg',
-      thumb: 'images/20250824MTQFiesta/cover.jpg',
-      folder: '20250824MTQFiesta',
+      banner: 'images/20250426EnriqueBarbaraWeddingAnniv/cover.jpg',
+      thumb: 'images/20250426EnriqueBarbaraWeddingAnniv/cover.jpg',
+      folder: '20250426EnriqueBarbaraWeddingAnniv',
       // fallback arrays (used when fetch fails)
       prints: createImageArray('w1', 8),
       solo: createImageArray('s1', 6),
