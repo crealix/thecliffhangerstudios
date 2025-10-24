@@ -120,12 +120,12 @@ p, li {
 }
 
 .wedding-title-desc {
-  font-size: 20px;
-  font-weight: 500;
-  /* color: #444; */
-  /* margin-bottom: 10px; */
-  padding: 1rem;
-    letter-spacing: 1px;
+  font-family: 'Baskerville Display PT';
+  color: #071E07; /* Olive green titles old color 254117*/
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 .desc-text {
   /* font-size: 24px; */
@@ -254,7 +254,7 @@ hr {
  text-align: center;
  color: white;
  font-family: 'Montserrat', sans-serif;
- background: url('../images/prenup/GRACE&MICHAEL-16.jpg') center/cover no-repeat;
+ background: url('../images/prenup/Grace&Michael-173.jpg') center/cover no-repeat;
 }
 
 /* Dark overlay */
@@ -1122,6 +1122,9 @@ footer a:hover {
   font-size: 1.2rem;
   /* line-height: 2.6; */
   margin-bottom:120px;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .calendar-section {
@@ -1135,7 +1138,7 @@ footer a:hover {
   text-align: center;
   /* background: #000; */
 
-  color: #000;
+  color: #071E07;
   padding: 10px 20px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -1179,6 +1182,7 @@ footer a:hover {
   font-size: 2.6rem;
   color: #0D330E;
   pointer-events: none;
+    font-weight: 100;
 }
 
 .couple-banner {
@@ -1245,7 +1249,7 @@ footer a:hover {
     }
     .wedding-title {
       font-size: 2.6rem;
-      font-weight: 100;
+      font-weight: 250;
       letter-spacing: 1px;
     }
     .invite-title {
@@ -1325,11 +1329,16 @@ footer a:hover {
     }
     .wedding-title {
       font-size: 2.6rem;
-      font-weight: 100;
+      font-weight: 250;
       letter-spacing: 1px;
+    }
+    .wedding-title-desc {
+      font-size: 2rem;
     }
     .invite-title {
       font-size: 1.5rem;
+      margin-left: 15px;
+      margin-right: 15px;
     }
 
     .invite-desc {
@@ -1383,13 +1392,266 @@ footer a:hover {
   .invite-desc {
     font-size: 1rem;
   }
+  .wedding-title-desc {
+    font-size: 1.5rem;
+  }
 }
 
-/* 🌸 Responsive Styles */
-/* @media (max-width: 768px) {
 
+
+.venue-section {
+  padding: 50px 20px;
+  /* background: #fff; */
+}
+
+.venue-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Left Image */
+.venue-image {
+  flex: 1 1 450px;
+  display: flex;
+  justify-content: center;
+}
+
+.venue-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Right Map */
+.venue-map {
+  flex: 1 1 450px;
+  text-align: center;
+}
+
+.venue-map h2 {
+  font-family: 'Baskerville Display PT', serif;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.venue-map p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.venue-map iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .venue-container {
+    flex-direction: column;
+  }
+
+  .venue-map iframe {
+    height: 300px;
+  }
+}
+
+/* timeline section */
+/* Header */
+.timeline-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.timeline-title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #071E07;
+    margin: 0;
+}
+
+/* Timeline Wrapper */
+.timeline-wrapper {
+    position: relative;
+}
+
+/* Timeline Container */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Timeline Vertical Line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 1rem;
+    bottom: 0;
+    width: 2px;
+    background-color: #071E07;
+    z-index: 1;
+}
+
+/* Timeline Items */
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Markers */
+.timeline-marker {
+    position: absolute;
+    left: -1.75rem;
+    top: 3.3rem;
+    width: 12px;
+    height: 12px;
+    background-color: #071E07;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Timeline Content */
+.timeline-content {
+    margin-left: 1rem;
+    flex: 1;
+}
+
+.timeline-time {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #071E07;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.08em;
+}
+
+.timeline-activity {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #071E07;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+
+    .timeline-title {
+        font-size: 2rem;
+        letter-spacing: 0.15em;
+    }
+
+    .timeline-header {
+        margin-bottom: 3rem;
+    }
+
+    .timeline {
+        padding-left: 1.5rem;
+        max-width: 350px;
+    }
+
+    .timeline-marker {
+        left: -1.25rem;
+        top: 2.9rem;
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline-content {
+        margin-left: 0.75rem;
+    }
+
+    .timeline-time {
+        font-size: 1.1rem;
+    }
+
+    .timeline-activity {
+        font-size: 1.4rem;
+        letter-spacing: 0.1em;
+    }
+
+    .timeline-item {
+        margin-bottom: 2.5rem;
+    }
 }
 
 @media (max-width: 480px) {
+    .timeline-title {
+        font-size: 1.8rem;
+        letter-spacing: 0.1em;
+    }
 
-} */
+    .timeline-time {
+        font-size: 1rem;
+    }
+
+    .timeline-activity {
+        font-size: 1.3rem;
+    }
+
+    .timeline-item {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .timeline::before,
+    .timeline-marker {
+        background-color: #071E07;
+    }
+
+    .timeline-title,
+    .timeline-time,
+    .timeline-activity {
+        color: #071E07;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+
+    .timeline::before,
+    .timeline-marker {
+        background-color: #071E07;
+    }
+}
