@@ -5,7 +5,7 @@
     {
       id: 'e1',
       title: '20250426EnriqueBarbaraWeddingAnniv',
-      date: 'October 04, 2025',
+      date: 'April 26, 2025',
       banner: 'images/20250426EnriqueBarbaraWeddingAnniv/cover.jpg',
       thumb: 'images/20250426EnriqueBarbaraWeddingAnniv/cover.jpg',
       folder: '20250426EnriqueBarbaraWeddingAnniv',

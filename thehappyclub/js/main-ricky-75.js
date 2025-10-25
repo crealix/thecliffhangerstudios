@@ -5,7 +5,7 @@
     {
       id: 'e1',
       title: '2025 OLLP Soccomm Ball',
-      date: 'October 04, 2025',
+      date: 'October 11, 2025',
       banner: 'images/20251011Rickyat75/cover.jpg',
       thumb: 'images/20251011Rickyat75/cover.jpg',
       folder: '20251011Rickyat75',

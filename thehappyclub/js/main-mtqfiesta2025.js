@@ -5,7 +5,7 @@
     {
       id: 'e1',
       title: '20250824MTQFiesta',
-      date: 'October 04, 2025',
+      date: 'August 24, 2025',
       banner: 'images/20250824MTQFiesta/cover.jpg',
       thumb: 'images/20250824MTQFiesta/cover.jpg',
       folder: '20250824MTQFiesta',

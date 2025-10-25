@@ -5,7 +5,7 @@
     {
       id: 'e1',
       title: '20250818horacian',
-      date: 'October 04, 2025',
+      date: 'August 18, 2025',
       banner: 'images/20250818horacian/horaciancover.jpg',
       thumb: 'images/20250818horacian/horaciancover.jpg',
       folder: '20250818horacian',

@@ -5,7 +5,7 @@
     {
       id: 'e1',
       title: '20250322sfxcs31stAnniv',
-      date: 'October 04, 2025',
+      date: 'March 22, 2025',
       banner: 'images/20250322sfxcs31stAnniv/cover.jpg',
       thumb: 'images/20250322sfxcs31stAnniv/cover.jpg',
       folder: '20250322sfxcs31stAnniv',
