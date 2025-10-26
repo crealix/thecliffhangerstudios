@@ -1,0 +1,54 @@
+# Ignore your specific folder
+thehappyclub/images/20250801TKMdasma/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary / backup files
+*.tmp
+*.bak
+*.swp
+*~
+*.old
+
+# Logs
+*.log
+
+# Editor folders and settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Cache / build folders
+cache/
+dist/
+build/
+out/
+temp/
+tmp/
+
+# Environment / config files
+.env
+.env.*
+
+# Node folder
+node_modules/
+
+# GitHub Pages build folder
+_site/
+
+# Optional: backup or design folders
+designs/
+drafts/
+backups/
