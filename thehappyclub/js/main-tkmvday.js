@@ -4,11 +4,11 @@
   const SAMPLE_EVENTS = [
     {
       id: 'e1',
-      title: '20240214TKMvalentinesday',
+      title: '20250214TKMvalentinesday',
       date: 'February 14, 2025',
-      banner: 'images/20240214TKMvalentinesday/cover.jpg',
-      thumb: 'images/20240214TKMvalentinesday/cover.jpg',
-      folder: '20240214TKMvalentinesday',
+      banner: 'images/20250214TKMvalentinesday/cover.jpg',
+      thumb: 'images/20250214TKMvalentinesday/cover.jpg',
+      folder: '20250214TKMvalentinesday',
       // fallback arrays (used when fetch fails)
       prints: createImageArray('w1', 8),
       solo: createImageArray('s1', 6),
