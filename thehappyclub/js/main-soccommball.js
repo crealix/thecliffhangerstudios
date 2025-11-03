@@ -396,47 +396,68 @@ function renderBatch() {
       }
     });
 
+    const UNIQUE_CODE = "10THANNIVSOCCOMM";
+
     /* Download Request Modal (reuse your original modal UI) */
     const downloadModal = document.getElementById('downloadModal');
     const dmClose = document.getElementById('dmClose');
     const dmSubmit = document.getElementById('dmSubmit');
-    const dmEmail = document.getElementById('dmEmail');
+    const dmCode = document.getElementById('dmCode');
     const dmMsg = document.getElementById('dmMsg');
 
     let pendingDownloadItems = [];
 
     function openDownloadModal(items) {
       pendingDownloadItems = items;
-      dmEmail && (dmEmail.value = '');
       dmMsg && (dmMsg.textContent = '');
       if (downloadModal) downloadModal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     }
     function closeDownloadModal() {
-      if (downloadModal) downloadModal.setAttribute('aria-hidden', 'true');
+      // Remove focus from any element inside the modal
+      if (document.activeElement) {
+        document.activeElement.blur();
+      }
+
+      if (downloadModal) {
+        downloadModal.setAttribute('aria-hidden', 'true');
+      }
+
       document.body.style.overflow = '';
     }
     dmClose && dmClose.addEventListener('click', closeDownloadModal);
 
     dmSubmit && dmSubmit.addEventListener('click', () => {
-      const em = dmEmail && dmEmail.value.trim();
-      if (!em || !validateEmail(em)) {
+      const code = dmCode && dmCode.value.trim();
+
+      if (!code) {
         if (dmMsg) {
-          dmMsg.textContent = 'Please enter a valid email';
-          dmMsg.className = 'small muted';
+          dmMsg.textContent = "Please enter Unique Code";
+          dmMsg.className = "small muted";
         }
         return;
       }
-      if (dmMsg) {
-        dmMsg.textContent = 'Request submitted. You will be notified by email.';
-        dmMsg.className = 'small';
+
+      if (code !== UNIQUE_CODE) {
+        if (dmMsg) {
+          dmMsg.textContent = "Invalid Unique code";
+          dmMsg.className = "small muted";
+        }
+        return;
       }
-      console.log('Download request:', { email: em, items: pendingDownloadItems });
+
+      if (dmMsg) {
+        dmMsg.textContent = "Unique code accepted! Downloading...";
+        dmMsg.className = "small";
+      }
+
       setTimeout(() => {
+        pendingDownloadItems.forEach(item => downloadItems(item));
         closeDownloadModal();
-        flashMessage('Download request received');
-      }, 1200);
+        flashMessage("Your download has started");
+      }, 800);
     });
+
 
     /* Utilities (copy, flash, fallback copy) */
     function copyToClipboard(text) {
@@ -469,9 +490,7 @@ function renderBatch() {
       document.body.appendChild(el);
       setTimeout(() => el.remove(), 2200);
     }
-    function validateEmail(email) {
-      return /\S+@\S+\.\S+/.test(email);
-    }
+
     function escapeHtml(s) {
       return String(s).replace(/[&<>"'`=\/]/g, function (c) {
         return {
@@ -498,3 +517,20 @@ function renderBatch() {
   }
 
 })(); // IIFE end
+
+function downloadItems(item) {
+  // If item is an object (ex: {src: "..."}), extract src
+  const actualUrl = (item && typeof item === "object" && item.src) ? item.src : item;
+
+  if (!actualUrl || typeof actualUrl !== "string") {
+    console.error("Invalid URL for download:", item);
+    return;
+  }
+
+  const a = document.createElement("a");
+  a.href = actualUrl;
+  a.download = actualUrl.split("/").pop();
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}

@@ -124,7 +124,7 @@ body{
 
 /* event page hero overlay */
 .event-hero{position:relative;height:1585px;overflow:hidden}
-.event-hero-img{width:100%;height:1585px;object-fit:cover;display:block}
+.event-hero-img{width:100%;height:800px;object-fit:cover;display:block}
 .event-hero-overlay{position:absolute;left:0;right:0;top:0;bottom:0;display:flex;align-items:flex-end;justify-content:space-between;padding:18px;color:#fff}
 .business-brand{display:flex;align-items:center;gap:12px; background:linear-gradient(90deg, rgba(0,0,0,0.35), rgba(0,0,0,0.15)); padding:8px 12px;border-radius:8px}
 .small-logo{width:56px;height:56px;border-radius:8px;object-fit:cover}
@@ -150,7 +150,14 @@ body{
 
 /* gallery grid */
 .gallery-grid{display:grid; gap:var(--gap); grid-template-columns: repeat(4, 1fr)}
-.gallery-item{background:#fff;border-radius:8px;overflow:hidden; box-shadow:var(--shadow); position:relative}
+.gallery-item{
+  background:#fff;
+  border-radius:8px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  position:relative;
+  margin: 16px;
+}
 .gallery-thumb{width:100%; height:160px; object-fit:cover; display:block}
 /* .gallery-caption{padding:8px 10px;font-size:0.9rem} */
 
@@ -367,4 +374,100 @@ cursor: pointer;
 .related-album-cover-img:hover,
 .gallery-img:hover {
 transform: scale(1.02);
+}
+
+/* NEW HOMEPAGE ADS ON STYLE */
+@font-face {
+  font-family: 'Baskerville Display PT';
+  src: url('fonts/BaskervilleDisplayPT-Regular-Fontspring-DEMO.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+.top-header-small {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.top-header-title {
+   /* font-family: 'Baskerville Display PT', cursive; */
+   font-family: 'Baskerville Display PT';
+   font-size: 60px;
+   margin-top: -10px;
+   margin-bottom: -1px;
+   text-align: center;
+}
+
+.brand-logo {
+    width: 100%;
+    max-width: 550px; /* adjust based on your preference */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.invite-desc {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom:120px;
+  text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-weight: 400px;
+}
+
+.special-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  border: 2px solid #E06B80; /* Olive green border */
+  border-radius: 30px;
+  background: transparent; /* No background */
+  color: #E06B80; /* Match text color with border */
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.special-button:hover {
+  background: #E06B80; /* Fill on hover */
+  color: white; /* Invert text color */
+}
+
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+  .top-header-title {
+    font-size: 38px;
+  }
+  .invite-desc {
+    font-size: 1.4rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .top-header-title {
+    font-size: 38px;
+  }
+  .brand-logo {
+        max-width: 320px;  /* shrink for phones */
+  }
+  .invite-desc {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 390px) {
+  .invite-desc {
+    font-size: 1rem;
+  }
 }
