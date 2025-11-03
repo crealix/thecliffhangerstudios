@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pages: write
+  id-token: write
 
 concurrency:
   group: pages
@@ -18,22 +19,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout the code
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2️⃣ Prepare site folder (exclude images)
       - name: Prepare site files
         run: |
           mkdir -p site/thehappyclub
           rsync -av --exclude 'images/' ./thehappyclub/ ./site/thehappyclub/
 
-      # 3️⃣ Upload site artifact
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./site/thehappyclub/
 
-      # 4️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
