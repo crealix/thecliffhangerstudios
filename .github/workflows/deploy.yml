@@ -6,42 +6,31 @@ on:
       - develop
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
-      # ------------------------------------------
-      # BUILD STEP (EXCLUDE IMAGES)
-      # ------------------------------------------
-      - name: Build site (exclude images)
-        run: |
-          mkdir build
-          rsync -av \
-            --exclude '.git/' \
-            --exclude='.github/' \
-            --exclude 'thehappyclub/images/' \
-            . build
-
-      # ------------------------------------------
-      # PREPARE DEPLOY DIRECTORY
-      # ------------------------------------------
-      - name: Prepare site files (include images)
+      - name: Build (exclude heavy folders)
         run: |
           mkdir site
-          rsync -av build/ site/
-          mkdir -p site/thehappyclub/images/
+          rsync -av \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='thehappyclub/images' \
+            ./ site/
+
+      - name: Add images
+        run: |
           rsync -av thehappyclub/images/ site/thehappyclub/images/
 
-      # ------------------------------------------
-      # DEPLOY TO GITHUB PAGES BRANCH
-      # ------------------------------------------
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
           publish_branch: gh-pages
-          force_orphan: true
+          publish_dir: site
