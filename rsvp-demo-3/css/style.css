@@ -1,0 +1,1127 @@
+/* Reset and Base  | MAIN */
+/* Global body font setup*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  background-color: #fffdfc;
+  color: #4a4a4a;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+} */
+
+/* Typography */
+/* h1 {
+  color: #ffedb6;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+h2 {
+  color: #806948;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+} */
+/*
+
+p, li {
+  font-size: 1rem;
+} */
+@font-face {
+  font-family: 'Baskerville Display PT';
+  src: url('fonts/BaskervilleDisplayPT-Regular-Fontspring-DEMO.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   font-size: 16px;
+   line-height: 1.6;
+   color: #0D330E; /* Dark green text */
+   background-color: #EEEFE0; /* Cream base background */
+ }
+ p,a,b {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+ .light-section {
+   background: #FAF9EE;
+   color: #2C3E50;
+ }
+
+ /* Elegant script for couple names, titles */
+ h1, h2, {
+   font-family: 'Baskerville Display PT';
+   font-weight: normal;
+   color: #254117; /* Olive green titles */
+   text-align: center;
+   letter-spacing: 1px;
+ }
+/* Subtitles / section headers */
+h3, h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #071E07;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/* Body text (details, RSVP instructions, FAQs, etc.) */
+p, li {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  /* color: #0D330E; /* Dark green for body text */
+}
+
+
+/* ///////////////// */
+
+/* === Buttons === */
+.rsvp-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #0D330E; /* Olive green */
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+  display: inline-block;
+}
+
+.rsvp-button:hover {
+  background: #2D531A; /* Darker green hover */
+}
+
+/* === Customize text Behavior === */
+.center-text {
+  text-align: center;
+}
+/* Names - elegant script */
+.wedding-title {
+  font-family: 'Baskerville Display PT';
+  /* font-family: 'Baskerville Display PT', cursive; */
+  /* font-weight: normal; */
+  color: #071E07; /* Olive green titles old color 254117*/
+  text-align: center;
+  font-size: 42px;
+  /* font-size: 93px; */
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.wedding-title-desc {
+  font-size: 20px;
+  font-weight: 500;
+  /* color: #444; */
+  /* margin-bottom: 10px; */
+  padding: 1rem;
+    letter-spacing: 1px;
+}
+.desc-text {
+  font-size: 24px;
+  /* color: #444; */
+  /* margin-bottom: 10px; */
+  padding: 1rem;
+}
+.wedding-sub-name-title {
+  font-family: 'Baskerville Display PT';
+  font-size: 56px;
+  color: #4B3A2F;
+  text-align: center;
+  margin-bottom: 0.3rem;
+}
+
+
+/* Supporting titles or dates */
+.wedding-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  /*color: #666;*/
+   color: white;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.hero-image {
+  width: 100%;          /* take full width of the container */
+  height: 100;         /* adjust height automatically (keeps proportion) */
+  display: block;       /* removes extra bottom spacing */
+  max-width: 2200px;    /* optional: set your preferred max width */
+  margin: 0 auto;       /* centers image if max-width is smaller than screen */
+  object-fit: cover;    /* ensures it won’t distort */
+}
+
+  /* === Sections === */
+.section {
+  /* padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto; */
+  padding:56px 0;
+}
+.alt-section {
+  background-color: #D1D8BE; /* Soft sage/khaki for alternating sections */
+}
+/* === Decorative Borders === */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #819A91; /* Sage line */
+  margin: 40px auto;
+  width: 60%;
+}
+/* ////////////////////
+///////////////////////
+/////////////////// */
+/* Navbar */
+.navbar {
+  background-color: #0D330E;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 12px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f8dada;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* === Banner Section === */
+.banner {
+ position: relative;
+ min-height: 100vh; /* full screen */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ color: white;
+ font-family: 'Montserrat', sans-serif;
+ background: url('../images/prenup/official-banner.jpg') center/cover no-repeat;
+}
+
+/* Dark overlay */
+.banner::before {
+ content: "";
+ position: absolute;
+ top: 0; left: 0;
+ width: 100%; height: 100%;
+ background: rgba(0, 0, 0, 0.35);
+ z-index: 1;
+}
+
+.banner-content {
+ position: relative;
+ z-index: 2;
+ max-width: 800px;
+ padding: 20px;
+}
+
+/* Date styling */
+.wedding-date {
+ font-size: 18px;
+ font-weight: 400;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ margin-bottom: 20px;
+ display: flex;
+ flex-wrap: wrap; /* allow wrap on smaller screens */
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+}
+
+.wedding-date span {
+ font-weight: 600;
+}
+
+.divider {
+ flex: 1;
+ height: 1px;
+ background: white;
+ min-width: 30px;
+}
+
+.wedding-date .day {
+ font-size: 56px;
+ font-weight: 700;
+}
+
+/* Couple names */
+.couple-names {
+ font-family: 'Baskerville Display PT', cursive;
+ font-size: 60px;
+ margin: 20px 0;
+}
+
+.decorative-line {
+ margin: 20px auto;
+ width: 150px;
+ height: 2px;
+ background: white;
+ border-radius: 2px;
+}
+
+.banner-subtitle {
+ font-size: 16px;
+ font-weight: 300;
+ margin-top: 20px;
+ color: #FAF9EE;
+}
+
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+ .banner {
+   min-height: 70vh; /* reduce height on smaller screens */
+   background-position: center top; /* crop from top */
+ }
+ .couple-names {
+   font-size: 38px;
+ }
+ .wedding-date .day {
+   font-size: 38px;
+ }
+ .wedding-date {
+   font-size: 14px;
+   gap: 5px;
+ }
+ .banner-subtitle {
+   font-size: 14px;
+   padding: 0 10px;
+ }
+ .divider {
+  display: none; /* ✅ hide dividers on mobile */
+ }
+ .desc-text {
+   font-size: 14px;
+   padding: 1rem;
+ }
+}
+
+@media (max-width: 480px) {
+ .banner {
+   min-height: 60vh;
+   background-position: center;
+ }
+ .couple-names {
+   font-size: 32px;
+ }
+ .wedding-date .day {
+   font-size: 32px;
+ }
+ .wedding-date {
+   font-size: 12px;
+ }
+ .divider {
+  display: none;
+ }
+ .desc-text {
+   font-size: 12px;
+   padding: 1rem;
+ }
+}
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+   font-family: 'Baskerville Display PT';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* Two Column Section */
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.two-column .text {
+  flex: 1;
+}
+
+.two-column img {
+  flex: 1;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+
+/*our story */
+.our-story {
+  padding: 2rem;
+  /*background-color: #fff; /* optional */*/
+}
+
+.our-story-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap; /* ensures it stacks on smaller screens */
+}
+
+.our-story .text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.our-story .text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* .our-story .text p {
+  font-size: 1rem;
+  line-height: 1.6;
+} */
+
+.our-story .image {
+  flex: 1 1 400px;
+  max-width: 500px;
+}
+
+.our-story .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: block;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery Grid */
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Video */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* RSVP Section */
+.qr {
+  width: 20%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .qr {
+    width: 75%;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: #806948;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #933c3c;
+}
+
+
+header, footer {
+  background-color: #0D330E;
+  color: #EEEFE0;
+  padding: 20px;
+  text-align: center;
+}
+/* Footer */
+footer a {
+  color: #A7C1A8; /* Dusty green links */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #819A91; /* Sage hover */
+}
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a img {
+  width: 24px;
+  margin: 0 10px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.social-icons a img:hover {
+  filter: grayscale(0%);
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Back to Top Button */
+#backToTopBtn {
+  position: fixed;
+  bottom: 16px;
+  right: 20px;
+  padding: 12px 16px;
+  border: none;
+  background-color: #071E07;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  display: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+#backToTopBtn:hover {
+  background-color: #2D531A;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0D330E;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 80%;
+  }
+
+  .two-column {
+    flex-direction: column;
+  }
+}
+
+/*photo gallery*/
+.photo-gallery {
+  column-count: 3;
+  column-gap: 0.7rem;
+  padding: 0.7rem;
+}
+
+.photo-gallery img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  display: block;
+  break-inside: avoid;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Tablet: 2 per row */
+@media (min-width: 576px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 480px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+  /*FAQ style*/
+    .faq-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    .faq-item {
+      border: 2px solid #00334e;
+      background-color: white;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      background-color: #FAF9EE;
+      font-family: 'Montserrat', sans-serif;
+      color: #0D330E;
+      font-weight: bold;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .faq-question.disabled {
+      background-color: #e0e0e0;
+      color: #999;
+      cursor: not-allowed;
+    }
+
+    .faq-answer {
+      background-color: #FAF9EE;
+      font-family: 'Montserrat', sans-serif;
+      padding: 1rem;
+      display: none;
+      color: #333;
+      border-top: 1px solid #ddd;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .toggle-icon {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+/* Section styling */
+.dress-code {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #5a6a98;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 0.5rem auto;
+  background: #b0b0c0;
+}
+
+/* Flexbox layout for 2 columns */
+.dress-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Each box */
+.dress-box {
+  flex: 1 1 300px;
+  max-width: 400px;
+  padding: 1rem;
+}
+
+/* Headings */
+.dress-box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Attire images */
+.attire-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.attire-images img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Color circle */
+.color-circle {
+  width: 160px;
+  height: 160px;
+  background-color: #071E07;
+  border-radius: 50%;
+  margin: 1rem auto;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.color-label {
+  font-weight: normal;
+  font-size: 1rem;
+  color: #111;
+}
+
+.circle-palette {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.circle-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.circle {
+  width: 80px;           /* size of circle */
+  height: 80px;
+  border-radius: 50%;
+}
+
+
+.shade1 { background-color: #6E8649; }
+.shade2 { background-color: #477923; }
+.shade3 { background-color: #2D531A; }
+.shade4 { background-color: #0D330E; }
+.shade5 { background-color: #071E07; }
+
+/* Responsive: shrink on small devices */
+@media (max-width: 600px) {
+  .circle {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+/* Text */
+.dress-box p {
+  font-size: 1rem;
+  color: #444;
+}
+
+.dress-box strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive stack */
+@media (max-width: 768px) {
+  .dress-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.attire-images {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.attire-images img {
+  width: 240px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+
+/* Lightbox */
+#lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding: 2rem;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 8px;
+}
+
+#close {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+/* Lightbox Modal */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+.lightbox iframe {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+.lightbox .close,
+.lightbox .prev,
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+.lightbox .close {
+  top: 50px;
+  right: 30px;
+  font-size: 35px;
+}
+.lightbox .prev { left: 30px; }
+.lightbox .next { right: 30px; }
+
+/* Gallery normal style*/
+.project-gallery {
+  display: grid;
+  margin-left: 18px;
+  margin-right: 18px;
+  /* grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.project-gallery img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;   /* force square box */
+  object-fit: cover;     /* crop instead of stretch */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.project-gallery img:hover {
+  transform: scale(1.02);
+}
+
+.project-gallery iframe {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;   /* force square box */
+  object-fit: cover;     /* crop instead of stretch */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+/* .project-gallery iframe:hover {
+  transform: scale(0.05);
+} */
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Responsive Adjustments project-gallery */
+@media (max-width: 1024px) {
+  .project-gallery {grid-template-columns: repeat(3, 1fr);}
+}
+
+@media (max-width: 768px) {
+.project-gallery {grid-template-columns: repeat(2, 1fr);}
+}
+
+@media (max-width: 480px) {
+.project-gallery {grid-template-columns: repeat(2, 1fr);}
+}
+@media (max-width: 390px) {
+.project-gallery {grid-template-columns: repeat(1, 1fr);}
+}
+
+
+/* Section style venue-section */
+.venue-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #fafafa;
+}
+
+.venue-desc {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #555;
+}
+
+/* Grid gallery - uniform size */
+.venue-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.venue-gallery img {
+  width: 100%;
+  height: 220px;              /* Same height for all images */
+  object-fit: cover;          /* Crop nicely without stretching */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.venue-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Modal popup */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .venue-gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .venue-gallery {
+    grid-template-columns: 1fr; /* 1 per row on phones */
+  }
+
+  .venue-gallery img {
+    height: 200px; /* Slightly smaller for small screens */
+  }
+}
+
+
+/* Floating Button Style */
+.music-btn {
+  position: fixed;
+  bottom: 75px;
+  right: 20px;
+  background: #ffffff;
+  color: #0D330E;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+.music-btn:hover {
+  transform: scale(1.1);
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+.music-btn.playing {
+  background: #f8bbd0;
+  color: #0D330E;
+  box-shadow: 0 0 20px rgba(233,30,99,0.5);
+}
+
+@media (max-width: 768px) {
+  .music-btn {
+    font-size: 1.2rem;
+    padding: 12px;
+    bottom: 75px;
+    right: 15px;
+  }
+}

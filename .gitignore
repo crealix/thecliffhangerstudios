@@ -1,0 +1,70 @@
+# Ignore your specific folder
+thehappyclub/images/20240928SMAPFiesta/
+thehappyclub/images/20241202Nora78/
+thehappyclub/images/20241207BanaagStageplay/
+thehappyclub/images/20241209Media5KiddieParty/
+thehappyclub/images/20241212EPEEQLawYEP/
+thehappyclub/images/20241213SMAPYEP/
+thehappyclub/images/20241214Kashama/
+thehappyclub/images/20241223MadrasPSA/
+thehappyclub/images/20250214TKMvalentinesday/
+thehappyclub/images/20250314CignalTownhall/
+thehappyclub/images/20250322sfxcs31stAnniv/
+thehappyclub/images/20250426EnriqueBarbaraWeddingAnniv/
+thehappyclub/images/20250801TKMdasma/
+thehappyclub/images/20250818horacian/
+thehappyclub/images/20250824MTQFiesta/
+thehappyclub/images/20251004OLLPSoccommBall/
+thehappyclub/images/20251011Rickyat75/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary / backup files
+*.tmp
+*.bak
+*.swp
+*~
+*.old
+
+# Logs
+*.log
+
+# Editor folders and settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Cache / build folders
+cache/
+dist/
+build/
+out/
+temp/
+tmp/
+
+# Environment / config files
+.env
+.env.*
+
+# Node folder
+node_modules/
+
+# GitHub Pages build folder
+_site/
+
+# Optional: backup or design folders
+designs/
+drafts/
+backups/
