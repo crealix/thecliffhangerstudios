@@ -13,11 +13,11 @@
   const SAMPLE_EVENTS = [
     {
       id: 'e1',
-      title: 'TKM MILCON 2025',
-      date: 'November 4, 2025',
-      banner: 'images/20251105TKMMilcon2025/cover.jpg',
-      thumb: 'images/20251105TKMMilcon2025/cover.jpg',
-      folder: '20251105TKMMilcon2025',
+      title: '2025 OLLP Soccomm Ball',
+      date: 'October 04, 2025',
+      banner: 'images/20251004OLLPSoccommBall/20251004soccommballcover.jpg',
+      thumb: 'images/20251004OLLPSoccommBall/20251004soccommballcover.jpg',
+      folder: '20251004OLLPSoccommBall',
       // fallback arrays (used when fetch fails)
       prints: createImageArray('w1', 8),
       solo: createImageArray('s1', 6),
@@ -396,7 +396,7 @@ function renderBatch() {
       }
     });
 
-    const UNIQUE_CODE = "TKM_MILCON2025";
+    const UNIQUE_CODE = "10THANNIVSOCCOMM";
 
     /* Download Request Modal (reuse your original modal UI) */
     const downloadModal = document.getElementById('downloadModal');
