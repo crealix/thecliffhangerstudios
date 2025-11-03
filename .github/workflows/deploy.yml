@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - develop   # ✅ deploy only when pushing to develop
+      - develop   # ✅ deploy only when pushing to develop branch
 
 permissions:
   contents: write
@@ -15,13 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload site files
+      - name: Prepare site files (exclude images)
+        run: |
+          mkdir site
+          rsync -av --exclude='thehappyclub/images/' ./ ./site/
+
+      - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./   # ✅ change if files are inside a folder
+          path: ./site   # ✅ only deploy lightweight files
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
