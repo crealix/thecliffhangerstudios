@@ -23,9 +23,12 @@ jobs:
       - name: Prepare site folder
         run: |
           mkdir site
-          cp -R . site/
-          rm -rf site/.git
-          rm -rf site/.github
+          shopt -s dotglob
+          for item in *; do
+            if [ "$item" != "site" ] && [ "$item" != ".git" ] && [ "$item" != ".github" ]; then
+              cp -R "$item" site/
+            fi
+          done
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
