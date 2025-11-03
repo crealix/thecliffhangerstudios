@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages (Develop Branch)
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,31 +6,31 @@ on:
       - develop-main
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
-
-concurrency:
-  group: pages
-  cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
-      - name: Prepare site files
+      - name: Prepare site folder
         run: |
-          mkdir -p site/thehappyclub
-          rsync -av --exclude 'images/' ./thehappyclub/ ./site/thehappyclub/
+          mkdir site
+          cp -R . site/
+          rm -rf site/.git
+          rm -rf site/.github
 
-      - name: Upload Pages artifact
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site/thehappyclub/
+          path: site
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
