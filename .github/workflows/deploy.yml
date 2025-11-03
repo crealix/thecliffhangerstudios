@@ -8,6 +8,7 @@ on:
 permissions:
   contents: write
   pages: write
+  id-token: write
 
 jobs:
   deploy:
@@ -28,10 +29,10 @@ jobs:
             --exclude='thehappyclub/images' \
             ./ site/
 
-      - name: Deploy pages
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
-      - name: Publish to GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
