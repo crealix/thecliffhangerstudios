@@ -15,9 +15,9 @@
       id: 'e1',
       title: 'TKM MILCON 2025',
       date: 'November 4, 2025',
-      banner: 'images/20251105TKMMilcon2025/cover.jpg',
-      thumb: 'images/20251105TKMMilcon2025/cover.jpg',
-      folder: '20251105TKMMilcon2025',
+      banner: 'images/20251105TKMMilcon/cover.jpg',
+      thumb: 'images/20251105TKMMilcon/cover.jpg',
+      folder: '20251105TKMMilcon',
       // fallback arrays (used when fetch fails)
       prints: createImageArray('w1', 8),
       solo: createImageArray('s1', 6),
