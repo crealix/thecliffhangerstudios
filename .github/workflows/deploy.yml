@@ -5,17 +5,21 @@ on:
     branches:
       - develop
 
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repo (shallow)
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
-      - name: Build (exclude heavy folders)
+      - name: Prepare site (exclude images + .git)
         run: |
           mkdir site
           rsync -av \
@@ -24,13 +28,10 @@ jobs:
             --exclude='thehappyclub/images' \
             ./ site/
 
-      - name: Add images
-        run: |
-          rsync -av thehappyclub/images/ site/thehappyclub/images/
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: site
+          path: site
+
+      - name: Publish to GitHub Pages
+        uses: actions/deploy-pages@v4
