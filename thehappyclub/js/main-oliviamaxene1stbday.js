@@ -396,7 +396,7 @@ function renderBatch() {
       }
     });
 
-    const UNIQUE_CODE = "OLIVIAMAXENE_1STBDAY";
+    const UNIQUE_CODE = "OMC_1STBDAY";
 
     /* Download Request Modal (reuse your original modal UI) */
     const downloadModal = document.getElementById('downloadModal');
