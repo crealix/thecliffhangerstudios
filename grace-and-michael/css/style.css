@@ -436,22 +436,29 @@ hr {
   object-fit: cover;
 }
 
-/* Video */
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  max-width: 800px;
-  margin: 0 auto;
+#prenup-video {
+  width: 100%;
+  padding: 0 20px; /* side allowance */
 }
 
+/* Semi-width wrapper */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;     /* Semi-width – adjust this to your liking */
+  aspect-ratio: 16 / 9;  /* Keeps perfect proportions */
+  overflow: hidden;
+  margin: 0 auto;        /* center align */
+  border-radius: 10px;   /* optional */
+}
+
+/* Make iframe fill wrapper */
 .video-wrapper iframe {
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   border: none;
 }
 
