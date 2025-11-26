@@ -1,20 +1,27 @@
-// Disable right-click
+// Detect if device is mobile
+function isMobile() {
+    return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+}
+
+// Disable right-click (works on desktop)
 document.addEventListener('contextmenu', event => event.preventDefault());
 
-// Block common DevTools shortcuts
+// Block common DevTools shortcuts (works on desktop)
 document.addEventListener('keydown', function(event) {
     if (
-        event.key === "F12" || 
-        (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') || 
-        (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'j') || 
+        event.key === "F12" ||
+        (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') ||
+        (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'j') ||
         (event.ctrlKey && event.key.toLowerCase() === 'u')
     ) {
         event.preventDefault();
     }
 });
 
-// Stealth DevTools detection
+// Stealth DevTools detection (desktop only)
 function detectDevTools() {
+    if (isMobile()) return; // Skip detection on mobile
+
     let threshold = 200;
     if (
         window.outerWidth - window.innerWidth > threshold ||
@@ -29,5 +36,7 @@ function detectDevTools() {
 // Check every second
 setInterval(detectDevTools, 1000);
 
-// Extra check (some browsers detect instantly)
-window.addEventListener('resize', detectDevTools);
+// Extra check (desktop only)
+if (!isMobile()) {
+    window.addEventListener('resize', detectDevTools);
+}
