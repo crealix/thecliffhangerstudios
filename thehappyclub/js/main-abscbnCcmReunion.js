@@ -13,11 +13,11 @@
   const SAMPLE_EVENTS = [
     {
       id: 'e1',
-      title: 'Mark and Kathrine Wedding',
-      date: 'November 22, 2025',
-      banner: 'images/20251122MarkAndKathrine/cover.jpg',
-      thumb: 'images/20251122MarkAndKathrine/cover.jpg',
-      folder: '20251122MarkAndKathrine',
+      title: 'ABS-CBN CCM Reunion and Photoshoot',
+      date: 'November 29, 2025',
+      banner: 'images/20251129AbscbnCcmReunion/cover.jpg',
+      thumb: 'images/20251129AbscbnCcmReunion/cover.jpg',
+      folder: '20251129AbscbnCcmReunion',
       // fallback arrays (used when fetch fails)
       prints: createImageArray('w1', 8),
       solo: createImageArray('s1', 6),
@@ -396,7 +396,7 @@ function renderBatch() {
       }
     });
 
-    const UNIQUE_CODE = "MARK_KATHRINE_WEDDING";
+    const UNIQUE_CODE = "thc-abscbnccmreunion";
 
     /* Download Request Modal (reuse your original modal UI) */
     const downloadModal = document.getElementById('downloadModal');
