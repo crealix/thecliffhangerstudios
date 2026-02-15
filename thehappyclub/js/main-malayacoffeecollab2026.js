@@ -385,7 +385,7 @@ function renderBatch() {
       }
     });
 
-    const UNIQUE_CODE = "malayacoffeecollab2026.";
+    const UNIQUE_CODE = "malayacoffeecollab2026";
 
     /* Download Request Modal (reuse your original modal UI) */
     const downloadModal = document.getElementById('downloadModal');
