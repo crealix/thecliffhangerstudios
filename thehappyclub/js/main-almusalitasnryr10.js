@@ -377,7 +377,7 @@ function renderBatch() {
       }
     });
 
-    const UNIQUE_CODE = "AlmuSalitaRNRyr10";
+    const UNIQUE_CODE = "AlmusalitaRnRY10";
 
     /* Download Request Modal (reuse your original modal UI) */
     const downloadModal = document.getElementById('downloadModal');
