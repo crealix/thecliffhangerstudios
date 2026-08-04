@@ -19,24 +19,24 @@ fadeEls.forEach(el => {
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+}
 
 // Back to Top Button
 const backToTopBtn = document.getElementById('backToTopBtn');
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopBtn.style.display = "block";
-  } else {
-    backToTopBtn.style.display = "none";
-  }
-});
+if (backToTopBtn) {
+  window.addEventListener('scroll', () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
 
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // FAQ
   const faqItems = document.querySelectorAll('.faq-item');
@@ -45,7 +45,7 @@ backToTopBtn.addEventListener('click', () => {
     const question = item.querySelector('.faq-question');
     const icon = item.querySelector('.toggle-icon');
 
-    if (!question.classList.contains('disabled')) {
+    if (question && !question.classList.contains('disabled')) {
       question.addEventListener('click', () => {
         item.classList.toggle('active');
         icon.textContent = item.classList.contains('active') ? '−' : '+';
